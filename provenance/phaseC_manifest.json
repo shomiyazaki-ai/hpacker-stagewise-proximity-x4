@@ -1,0 +1,29 @@
+{
+  "bioemu_commit": "42c551133f9825f4ec01812075b0d50e268c2209",
+  "inputs": {
+    "wt0_baseline": {
+      "file": "wt0_baseline.pdb",
+      "sha256": "436b4995664c81ab64e97c57f4b879eb1dc5d5f3146dd627081fe48c509f114f",
+      "source": "WT_source000\\stage_05.pdb",
+      "atom_records": 494
+    },
+    "wt0_v8_1_rescue": {
+      "file": "wt0_v8_1_rescue.pdb",
+      "sha256": "25ba1f07865fc074b99296fa809d832821dd8b5abd23fa909f3de3f43bd969e8",
+      "source": "hpacker_mediation_v8_1_results\\WT_source000\\rescue\\stages\\stage_05.pdb",
+      "atom_records": 494
+    },
+    "wt1_baseline": {
+      "file": "wt1_baseline.pdb",
+      "sha256": "81d4034a6df8ff933e6b27e04ff6cfd058763b4770e22771774c77c6047ad84b",
+      "source": "WT_source001\\stage_05.pdb",
+      "atom_records": 494
+    },
+    "wt1_v8_1_rescue": {
+      "file": "wt1_v8_1_rescue.pdb",
+      "sha256": "90dd4ede7523b32f3a6b68eeb56768b874031619a15ac1fc27e41b8caf028d6b",
+      "source": "hpacker_mediation_v8_1_results\\WT_source001\\rescue\\stages\\stage_05.pdb",
+      "atom_records": 494
+    }
+  }
+}

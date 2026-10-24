@@ -1,0 +1,11 @@
+case,stage,donor,receiver,selection,zernike_l2,raw8_max_abs_diff,chi_max_circular_deg,source,evidence_class
+WT_source000,4,53,6,preselected_low_response,0.056751900551725944,0.035291194915771484,0.23975372314453125,v8.4,selected post-hoc pair response; not a unique pathway
+WT_source000,4,53,25,preselected_low_response,0.04152283079271375,0.02482020854949951,0.05316925048828125,v8.4,selected post-hoc pair response; not a unique pathway
+WT_source000,4,53,50,preselected_low_response,0.03603937431351583,0.005751252174377441,0.08294677734375,v8.4,selected post-hoc pair response; not a unique pathway
+WT_source000,4,53,55,preselected_high_response,0.06710929975052192,0.14101913571357727,54.08876633644104,v8.3,selected post-hoc pair response; not a unique pathway
+WT_source001,3,55,3,preselected_high_response,0.21131657722462469,1.369135558605194,148.68901824951172,v8.3,selected post-hoc pair response; not a unique pathway
+WT_source001,3,55,11,preselected_low_response,0.10022874932241539,0.03813016414642334,0.3057403564453125,v8.4,selected post-hoc pair response; not a unique pathway
+WT_source001,3,55,52,preselected_low_response,0.024545516084871072,0.013455510139465332,0.11882781982421875,v8.4,selected post-hoc pair response; not a unique pathway
+WT_source001,3,55,53,preselected_low_response,0.13722678551969508,0.08083891868591309,0.07997894287109375,v8.4,selected post-hoc pair response; not a unique pathway
+WT_source001,3,55,56,preselected_high_response,0.19831904660832722,1.6711655855178833,178.32879638671875,v8.3,selected post-hoc pair response; not a unique pathway
+WT_source001,3,55,59,preselected_high_response,0.2318743505239044,0.7525878399610519,52.08226013183594,v8.3,selected post-hoc pair response; not a unique pathway
