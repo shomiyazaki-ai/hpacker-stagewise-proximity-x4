@@ -6,5 +6,8 @@ authors:
   - family-names: Miyazaki
     given-names: Sho
     affiliation: "Independent researcher, Tokyo, Japan"
-license: CC-BY-4.0
-abstract: "Author-created manuscript and figures CC BY 4.0; original owned code MIT; third-party inputs subject to separate terms. DOI not yet assigned."
+abstract: "Author-created manuscript and figures CC BY 4.0; original owned code MIT; third-party inputs subject to separate terms. See separate licenses in the repository."
+doi: 10.5281/zenodo.23616075
+url: "https://doi.org/10.5281/zenodo.23616075"
+version: 1.0.0
+date-released: 2026-10-24
