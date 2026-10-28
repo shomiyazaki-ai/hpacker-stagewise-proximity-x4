@@ -1,0 +1,7 @@
+Source,Structure,"Archived LJ proxy
+(kJ/mol)",Tracked baseline-dominant pair,"Same-pair
+distance (Å)"
+0,Original,+1.661683e+13,6:PHE:CD1 - 55:PHE:CE2,0.277
+0,Locally perturbed,"+27,071.42",6:PHE:CD1 - 55:PHE:CE2,5.514
+1,Original,"+9,951,309.66",6:PHE:CG - 55:PHE:CE2,0.916
+1,Locally perturbed,"+27,582.95",6:PHE:CG - 55:PHE:CE2,6.336

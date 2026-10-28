@@ -1,0 +1,155 @@
+# Stage-wise Extreme Atomic Proximity in HPacker Side-chain Reconstruction
+
+Sho Miyazaki | Independent researcher, Tokyo, Japan
+
+28 October 2026 | Version 1.1.0 | DOI: 10.5281/zenodo.23717073
+
+## Abstract
+
+Final reconstructed structures do not show whether extreme atomic proximities disappeared and returned during refinement. We examined 200 saved source frames from one BioEmu WT ensemble, each represented by six HPacker reconstruction stages. General nonadjacent interresidue heavy-atom proximity below 1.6 Å occurred in 183, 148, 140, 128, 130 and 134 frames at stages 0-5. At least one such proximity occurred in 196/200 frames; 147/200 showed ordered contact-absence-contact for the same atom pair. PHE6-PHE55 residue-pair recontact occurred in 43/200 frames, including 25 completely alternating six-stage histories. Selected local interventions, saved neural-network responses, four short restrained OpenMM continuations and a restricted heavy-atom Lennard-Jones proxy provide supplementary case diagnostics. These observations describe one fixed reconstruction record. They support retaining intermediate stages, without establishing general packing failure rates, a unique causal pathway, improved MD completion or thermodynamic stabilization.
+
+## 1. Introduction
+
+BioEmu provides protein conformation ensembles and an accompanying route to side-chain reconstruction and relaxation [1,5,6]. H-Packer predicts side-chain χ angles and supports repeated refinement of reconstructed structures [2]. When only the final coordinates are inspected, a contact that persists throughout the calculation cannot be distinguished from one that disappears and returns.
+
+The question here is descriptive: within a fixed archived ensemble, how do extreme nonadjacent heavy-atom proximities change across six reconstruction stages? The contribution is a traceable stage-sequence record and independent coordinate-based verification. It is not a benchmark of H-Packer against other packing methods. The selected PHE6-PHE55 pair and downstream local-response cases arose during exploration; they were not prospectively sampled tests of prevalence or causality.
+
+## 2. Methods
+
+### 2.1. Input ensemble and stage-wise contact definitions
+
+The input comprises all 200 saved frames (source IDs 0-199) of the 63-residue WT 2K2A ensemble in BioEmu supplementary data, samples_delta_G.zip [5]. A prior archive-entry comparison identifies the saved XTC and topology by complete SHA-256; P1 rehashed those saved inputs. HPacker commit 6cd5ec33961bb2662b51c0a15d11d6fd9162f2a7 produced an initial stage 0 and five refinement updates (stages 1-5), with 494 heavy atoms in each of 1,200 saved PDBs. Stages are algorithm updates, not physical time. Input conversion and implementation fingerprints are in SI S1.
+
+General proximity is the presence of at least one nonadjacent interresidue heavy-atom pair at a Euclidean distance strictly below 1.6 Å. Same-residue and sequence-adjacent residue pairs are excluded. PHE6-PHE55 proximity uses the minimum distance over all heavy atoms of those residues. Strict same-atom ordered recontact requires the same unordered atom pair to be present at stage i, absent at j and present at k, with i < j < k. PHE residue-pair recontact instead uses that residue pair’s binary contact sequence; it need not involve the same atoms. These custom extreme-proximity diagnostics are not a MolProbity clashscore [4].
+
+### 2.2. Exploratory local interventions and NN diagnostics
+
+A local masking pulse removes the designated side-chain atoms from neighborhood feature arrays, without deleting the residue from the PDB. A lag pulse temporarily supplies its saved stage s-2 side-chain coordinates during neighborhood evaluation and restores the original coordinates afterwards; it is ineligible for s < 2. Subsequent χ substitutions act before Cartesian side-chain reconstruction. Five selected downstream χ blocks retain a preceding local rescue background. SI Tables S2A-1 and S2A-2 separate pulse stage, target, perturbed residue, measured partner and χ-edit stage; those roles must not be conflated.
+
+Ten selected diagnostics compare saved Zernikegram features, eight-component raw NN outputs and circular χ differences after a donor-side-chain coordinate restoration. Raw-output differences are dimensionless, not probabilities; circular differences are not corrected for chemical symmetry. P1 recomputed saved-array arithmetic. An archived full-batch receipt is available for one source-0 stage-4 donor 53 → receiver 55 comparison; it was inspected here, not rerun or generalized to all paths.
+
+### 2.3. Selected OpenMM continuation and LJ proxy
+
+Two source frames each supplied an original and a locally perturbed stage-5 structure for previously executed BioEmu relaxation at commit 42c551133f9825f4ec01812075b0d50e268c2209. OpenMM 8.2.0 [3], AMBER99SB and explicit TIP3P water were used at 300 K, with 1-bar NPT, four small-step stabilization stages, 0.1 ns NVT and 0.4 ns NPT. Positional restraints remained active, including an atom-name selection that can include water oxygen. There was no subsequent unrestrained production MD. SI S5 reports actual OpenCL/single-precision execution and full conditions. The separate LJ proxy includes only defined nonadjacent protein heavy-atom pairs; it is not a solvated-system energy decomposition (SI S6).
+
+## 3. Results
+
+### 3.1. Stage-wise prevalence and recontact
+
+General proximity declined from 183 frames at stage 0 to 128 at stage 3, then increased to 130 and 134 (Figure 1A). PHE6-PHE55 counts also varied nonmonotonically (Figure 1B). Union and recontact endpoints answer different questions (Table 1): 196 frames had a general proximity at least once, whereas 147 had a disappearance and return of the same atom pair. The independently recalculated strict count replaces the historical 153 counter, which allowed persistence without an intervening absence.
+
+![Figure](../figures/Figure_1.png)
+Figure 1. Counts among the same 200 source frames. A: general nonadjacent interresidue heavy-atom proximity; B: PHE6-PHE55 proximity. Both panels use a 0-200 y axis and a strict <1.6 Å contact criterion. Reconstruction stages are not physical time.
+
+Table 1. Fixed-ensemble sequence endpoints.
+
+| Endpoint | Definition across stages 0-5 | Frames / 200 |
+| --- | --- | --- |
+| General union | Any qualifying atom pair in at least one stage | 196 |
+| Strict same-atom recontact | The same unordered atom pair: present, absent, present at i < j < k | 147 |
+| PHE6-PHE55 union | Residue pair close in at least one stage | 67 |
+| PHE6-PHE55 recontact | Residue-pair binary sequence: contact, absence, contact | 43 |
+| Complete PHE alternation | 010101 (10) or 101010 (15) | 25 |
+All denominators are the same 200 source frames. Strict atom-pair recontact and residue-pair recontact are different endpoints. The historical 153 counter is superseded for strict recontact.
+
+### 3.2. Representative source-frame sequence
+
+Source frame 0 exhibits the PHE6-PHE55 pattern 010101. Its minimum interresidue heavy-atom distances are 4.291, 0.633, 4.037, 0.560, 4.030 and 0.277 Å at stages 0-5. Figure 2 renders the actual six stored PDB structures with one fixed camera and coordinate scale. The closest atom identities can change between stages; this sequence illustrates residue-pair alternation, not oscillation along a physical trajectory.
+
+![Figure](../figures/Figure_2.png)
+Figure 2. PHE6 (blue) and PHE55 (orange) in source frame 0. All panels render the archived PDB coordinates using the same orthographic camera and coordinate limits. Dashed segments connect the closest heavy-atom pair; labels give three-dimensional distances. Atom labels below each panel are ordered PHE6 then PHE55. The view shows CA and side-chain atoms, not a regenerated molecular model. Figure S1 shows the corresponding distance trace.
+
+### 3.3. Selected exploratory local responses
+
+Sections 3.3-3.5 concern selected supplementary diagnostics, not ensemble-wide tests. In source 0, the locally perturbed stage-5 structure separated PHE6-PHE55 beyond 1.6 Å, while retaining one general close pair (Table 2). This local geometric change defines the archived “rescue” label; it does not establish a generally repaired structure.
+
+Table 2. Selected pre-relaxation local geometry.
+
+| Metric (source 0, stage 5) | Original | Locally perturbed |
+| --- | --- | --- |
+| PHE6-PHE55 minimum distance (Å) | 0.277274 | 1.881472 |
+| PHE6-PHE55 atom pairs <1.6 Å | 5 | 0 |
+| General atom pairs <1.6 Å | 6 | 1 |
+The perturbed structure still has one general close pair (minimum 1.550220 Å); separating PHE6-PHE55 does not remove every extreme proximity.
+
+The four selected larger-response examples show different raw-output and χ changes (Table 3). All six selected weaker-response examples also have nonzero raw-output differences (Table S2B). These are local response records in selected structures. Neither the intervention labels nor the saved one-point full-batch receipt establishes unique residue-mediated causality or complete end-to-end regeneration.
+
+Table 3. Four selected stronger NN-response examples.
+
+| Source | Stage | Donor → receiver | Max raw-output |Δ| | Max circular χ |Δ| (°) |
+| --- | --- | --- | --- | --- |
+| 0 | 4 | 53 → 55 | 0.141019 | 54.088766 |
+| 1 | 3 | 55 → 3 | 1.369136 | 148.689018 |
+| 1 | 3 | 55 → 56 | 1.671166 | 178.328796 |
+| 1 | 3 | 55 → 59 | 0.752588 | 52.082260 |
+Raw eight-component output differences are dimensionless, not probabilities. Selection is post hoc; circular χ differences have no chemical symmetry correction. See Table S2B for all ten saved-array comparisons and the separate selected full-batch receipt.
+
+### 3.4. Selected short OpenMM relaxation
+
+All four selected runs completed the fixed restrained continuation. The initial/final geometry comparison is given in Table 4. Both originals also completed; these records do not demonstrate an increase in completion probability after perturbation. Separate WT0 minimization-only structures have zero close pairs (SI S5.4), but they are not intermediate checkpoints in these Phase C runs. WT1 minimization-only coordinates and contact counts remain unavailable.
+
+Table 4. Initial inputs and final short-MD structures.
+
+| Source | Structure | Initial pairs <1.6 Å | Final MD pairs <1.6 Å | Completion |
+| --- | --- | --- | --- | --- |
+| 0 | Original | 6 | 0 | Completed |
+| 0 | Locally perturbed | 1 | 0 | Completed |
+| 1 | Original | 3 | 0 | Completed |
+| 1 | Locally perturbed | 1 | 0 | Completed |
+These are two matched timepoints per selected Phase C case. No minimization-only checkpoint is inserted. The separate WT0 M2 results appear in S5.4; WT1 minimized geometry is unavailable.
+
+### 3.5. Restricted LJ analysis
+
+The archived net heavy-atom LJ proxy is much larger in the two selected originals than in their locally perturbed counterparts (Table 5; Figure S2). The dominant source-0 original pair, PHE6 CD1-PHE55 CE2, changes from 0.277 to 5.514 Å and accounts for approximately 99.9999991% of this defined proxy reduction. For source 1, PHE6 CG-PHE55 CE2 changes from 0.916 to 6.336 Å and accounts for approximately 99.1753%. These tracked pairs need not be the nearest pairs after perturbation.
+
+Table 5. Restricted protein heavy-atom LJ proxy and tracked pairs.
+
+| Source | Structure | Archived LJ proxy (kJ/mol) | Tracked baseline-dominant pair | Same-pair distance (Å) |
+| --- | --- | --- | --- | --- |
+| 0 | Original | +1.661683e+13 | 6:PHE:CD1 - 55:PHE:CE2 | 0.277 |
+| 0 | Locally perturbed | +27,071.42 | 6:PHE:CD1 - 55:PHE:CE2 | 5.514 |
+| 1 | Original | +9,951,309.66 | 6:PHE:CG - 55:PHE:CE2 | 0.916 |
+| 1 | Locally perturbed | +27,582.95 | 6:PHE:CG - 55:PHE:CE2 | 6.336 |
+Values are archived summary outputs. The perturbed distance tracks the baseline-dominant atom pair, which need not remain the nearest pair. Coordinate precision comparisons are in Table S4. These are neither solvated potential energies nor free energies.
+
+The extreme magnitudes reflect the steep short-range LJ repulsion at nonphysical interatomic separations. Saved values use an nm-float32 coordinate pathway. Direct PDB-double recomputation and summation of saved CSV entries are retained separately in Table S4; small numerical differences do not redefine the archived result.
+
+## 4. Discussion
+
+The central observation is nonmonotonic extreme proximity across algorithmic stages. A final-stage snapshot alone cannot recover whether a particular atom pair remained close or disappeared and returned. The distinction between the 147 strict same-atom recontacts and 43 PHE residue-pair recontacts is therefore substantive, not a difference in rounding. Saving intermediate coordinates and stating the endpoint definition makes these histories inspectable.
+
+The supplementary cases connect selected local-input changes to saved NN responses and record what happened in subsequent restrained relaxation and restricted LJ calculations. They provide bounded diagnostic context. The four completed continuations do not measure comparative robustness; the LJ proxy quantifies only its selected pair set. Neither result establishes recovery of equilibrium populations, a unique mechanistic explanation, or a superior packing procedure.
+
+## 5. Limitations
+
+The ensemble is fixed and comes from one WT system; frames are not independent replicates of diverse proteins. The 1.6 Å threshold is a custom extreme-proximity criterion, with no claim to a comprehensive validation score. PHE6-PHE55 and local-response examples were selected after exploration, without a held-out set or prospective strong/weak thresholds. Saved NN arrays support arithmetic checks, while full trained forward evidence covers one archived selected diagnostic only. Original sham-array provenance remains incomplete. Reconstruction and coordinate parity are limited to saved precision and documented receipts.
+
+Continuation used four selected restrained, differently solvated systems and OpenCL single precision. The restraint’s atom-name O selection includes water oxygen; integration probes can alter stochastic trajectories. No WT1 minimized geometry is supplied. The LJ proxy omits hydrogen-containing pairs, same/adjacent residue terms, solvent, ions, electrostatics and bonded energies. Its strong distance sensitivity and coordinate quantization preclude interpreting it as total potential energy, thermodynamic stability, folding free energy or general MD-success prediction.
+
+## 6. Conclusions
+
+Within this fixed 200-frame, six-stage archive, extreme atomic proximity is nonmonotonic and the same atom pair can disappear and reappear. The full coordinates, strict endpoint definitions and independent read-only calculations preserve that observation. Selected local-response, restrained-continuation and LJ records add diagnostic context at explicitly narrower evidentiary levels.
+
+## 7. Data availability, references and declarations
+
+### Data availability
+
+Version 1.1.0 record DOI: https://doi.org/10.5281/zenodo.23717073. This version contains 1,200 stage PDBs, original receipt hashes, diagnostics, selected E2-E4 records, editable sources, and read-only verification code. The corresponding GitHub repository provides a lighter browsing and verification entry point: https://github.com/shomiyazaki-ai/hpacker-stagewise-proximity-x4. The preceding published v1.0.0 has a distinct version DOI: https://doi.org/10.5281/zenodo.23616075. The version-specific DOI identifies this revision; source and historical run dates are retained in the supporting records.
+
+### Declarations
+
+Funding: no external funding declared for this independent analysis. Competing interests: none declared. BioEmu, H-Packer and OpenMM developers are credited through the references; no endorsement is implied. AI disclosure: ChatGPT assisted with planning, code and data checks, figure and manuscript production, and local self-QC. The human author remains responsible for scientific interpretation and release. Author-owned prose and figures use CC BY 4.0; eligible original author code uses MIT. BioEmu data and related third-party materials retain scoped upstream terms, with CDLA-Permissive-2.0 supplied alongside the data. See NOTICE.md and LICENSES/LICENSE_SCOPE.md; the package is not uniformly MIT or CC BY.
+
+### References
+
+[1] Lewis, S., Hempel, T., Jiménez-Luna, J., et al. Scalable emulation of protein equilibrium ensembles with generative deep learning. Science 389 (2025), eadv9817. https://doi.org/10.1126/science.adv9817
+
+[2] Visani, G. M., Galvin, W., Pun, M., and Nourmohammad, A. H-Packer: Holographic Rotationally Equivariant Convolutional Neural Network for Protein Side-Chain Packing. PMLR 240 (2024), 230-249. https://proceedings.mlr.press/v240/visani24a.html
+
+[3] Eastman, P., et al. OpenMM 7: Rapid development of high performance algorithms for molecular dynamics. PLoS Computational Biology 13 (2017), e1005659. https://doi.org/10.1371/journal.pcbi.1005659
+
+[4] Williams, C. J., et al. MolProbity: More and better reference data for improved all-atom structure validation. Protein Science 27 (2018), 293-315. https://doi.org/10.1002/pro.3330
+
+[5] BioEmu supplementary data, Zenodo record 15672282, samples_delta_G.zip; WT entry delta_G//2K2A/. https://zenodo.org/records/15672282. The archived entry-match receipt is supplied; the whole upstream ZIP was not redownloaded in P1.
+
+[6] Implementation sources: BioEmu commit 42c551133f9825f4ec01812075b0d50e268c2209 (https://github.com/microsoft/bioemu); H-Packer commit 6cd5ec33961bb2662b51c0a15d11d6fd9162f2a7 (https://github.com/gvisani/hpacker). Benchmark data terms: https://github.com/microsoft/bioemu-benchmarks and https://cdla.dev/permissive-2-0/.

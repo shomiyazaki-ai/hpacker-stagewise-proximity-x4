@@ -1,0 +1,5 @@
+Source / structure,Archived summary (kJ/mol),Archived CSV sum (kJ/mol),PDB-double recomputation (kJ/mol)
+0 / Original,16616827328250.179688,16616827328239.929688,16614078362116.181641
+0 / Locally perturbed,27071.418583,27071.418583,27071.324155
+1 / Original,9951309.663636,9951309.663635,9951099.620821
+1 / Locally perturbed,27582.949266,27582.949266,27584.089713

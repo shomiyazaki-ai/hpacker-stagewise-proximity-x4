@@ -1,0 +1,13 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "pillow": "12.3.0"
+  },
+  "scientific_execution": "read-only coordinates, saved arrays, logs and pairwise formulas only",
+  "new_hpacker_or_NN_or_MD": false
+}

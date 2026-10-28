@@ -1,0 +1,306 @@
+[
+  {
+    "type": "title",
+    "text": "Supplementary Information"
+  },
+  {
+    "type": "paragraph",
+    "text": "Stage-wise Extreme Atomic Proximity in HPacker Side-chain Reconstruction"
+  },
+  {
+    "type": "paragraph",
+    "text": "Sho Miyazaki | 28 October 2026 | 1.1.0 | DOI: 10.5281/zenodo.23717073"
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "S1. Input provenance and implementation"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S1.1. Official source and saved input identity"
+  },
+  {
+    "type": "paragraph",
+    "text": "The study uses the WT 2K2A entry of BioEmu samples_delta_G.zip, associated with Zenodo record 15672282 [main text, refs 1 and 5]. The historical archive-entry match JSON identifies delta_G//2K2A/samples.xtc and delta_G//2K2A/topology.pdb by full SHA-256 against the saved inputs, distinguishing similarly named mutant entries. P1 independently rehashed the saved XTC/topology and parsed XTC frame headers: 200 frames, 310 atoms per frame; topology has 310 atoms in 63 residues. The N/CA/C/O backbone selection contains 252 atoms. Header inspection did not decompress XTC coordinates or regenerate backbone inputs."
+  },
+  {
+    "type": "code",
+    "text": "samples.xtc | 258,900 bytes\nSHA-256: 0f42d6d669f5e1c765d0be9299aafc3f127676800d72bfee0c3c4e511ff790b9\ntopology.pdb | 25,163 bytes\nSHA-256: ad00dcbeec51b8941430bba94eadb4226a1e3e495e6644bce9492a193bf10798"
+  },
+  {
+    "type": "paragraph",
+    "text": "The archived match receipt reports upstream ZIP size 1,959,113,732 bytes and 3,196 entries. P1 did not download that whole archive or independently recompute its MD5. No whole-archive checksum validation is claimed. The live Zenodo record could not be reread through the available retrieval routes during P1; this is retained as a publication metadata check, not silently treated as fresh source verification."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S1.2. Conversion and HPacker fingerprints"
+  },
+  {
+    "type": "paragraph",
+    "text": "The BioEmu reconstruction route selects backbone atoms, discards CB, writes one backbone PDB per source frame and invokes H-Packer. The fixed HPacker implementation produced stage 0 (initial prediction) and five refinement stages. Every output used here has the same 494 heavy-atom identifiers in one chain. All 1,200 candidate PDBs match the original first-batch/continuation PDB bytes and their per-source receipt SHA-256, with source IDs 0-199 and stage IDs 0-5. A receipt is provenance evidence; its past PASS label is not an independent scientific certification."
+  },
+  {
+    "type": "code",
+    "text": "HPacker commit: 6cd5ec33961bb2662b51c0a15d11d6fd9162f2a7\nLoaded hpacker.py SHA-256:\n38701f5a97873694701313cae09124868f352b563c73ecdf1dc4d486847ce063\nBioEmu continuation commit:\n42c551133f9825f4ec01812075b0d50e268c2209"
+  },
+  {
+    "type": "paragraph",
+    "text": "Per-source environment.json records preserve hashes for initial, refinement and conditioned model hyperparameters and weights. These fingerprints identify the historical implementation; the model weights are not redistributed and P1 did not execute trained inference. See provenance/e1_source_receipts and the archived intervention scripts. The user-supplied Graylab/HPacker URL was inaccessible; the archived implementation and primary publication identify gvisani/hpacker as the relevant upstream repository."
+  },
+  {
+    "type": "paragraph",
+    "text": "Historical identifier crosswalk: WT0/WT1 mean source frames 0/1 of the same WT ensemble, not different systems. E1 denotes the stage-wise ensemble record; E2 the selected local/NN diagnostics; E3 (Phase C) the four continuations; E4 (Stage A) the restricted LJ proxy. v8.1-v8.4 denote the intervention/diagnostic implementations described in S4. A file-level lookup is in provenance/Internal_Identifier_Crosswalk.csv. Unused parent-study screening labels are omitted from the scientific narrative."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S1.3. Rights and artifact classes"
+  },
+  {
+    "type": "paragraph",
+    "text": "Saved BioEmu inputs and their coordinate lineage are attributed to the upstream data source. CDLA-Permissive-2.0 accompanies the distributed dataset and coordinate materials, without asserting author ownership of the upstream inputs. Author-written analysis, manuscripts and figure presentation are distinguished from third-party data and software. Eligible original author code is MIT; author-owned prose and figures are CC BY 4.0. Reused Microsoft source retains its MIT notice. Archived intervention outputs and NPZ files retain upstream-data provenance; inclusion does not make every file CC BY or MIT. File-specific classification is in provenance/Rights_Manifest.csv and LICENSES/LICENSE_SCOPE.md."
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "S2. Contact definitions and full stage counts"
+  },
+  {
+    "type": "paragraph",
+    "text": "PDB ATOM/HETATM coordinates are parsed as Å into float64 arrays. Hydrogen and deuterium atoms are excluded. Atoms are identified by chain, residue number, insertion code, residue name and atom name, with duplicate identities or nonfinite coordinates rejected. For this fixed single-chain, consecutively numbered 1-63 system, nonadjacent means absolute residue-number separation greater than one. Same-residue/adjacent-residue pairs are omitted; each remaining unordered atom pair is counted once. Distances are Euclidean without periodic wrapping. A contact requires d < 1.6 Å; equality is noncontact."
+  },
+  {
+    "type": "paragraph",
+    "text": "General stage prevalence counts frames with any eligible contact. The union counts frames with any contact in any stage. Let C_s be the set of exact unordered atom-pair identities present at stage s. Strict recontact requires a pair p with p in C_i, p absent from C_j, and p in C_k for i < j < k. Persistence alone is insufficient. PHE6-PHE55 recontact uses the binary residue-pair sequence b_s and an ordered 1-0-1 triple; the minimum-pair atom names may differ. This distinction is explicit in code/verify_e1_from_pdb.py."
+  },
+  {
+    "type": "table",
+    "id": "Table_S1"
+  },
+  {
+    "type": "paragraph",
+    "text": "The legacy general_same_atom_recontact field in historical frame_summary_200.csv yields 153 because it did not enforce an intervening absence. It is preserved as historical data, not reused as the corrected endpoint. The strict result is 147/200. Synthetic controls verify that persistent contact is not recontact and that contact by a different atom pair does not satisfy same-atom recontact. No threshold sweep or additional scientific endpoint was introduced."
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "S3. Representative frame sequence"
+  },
+  {
+    "type": "figure",
+    "file": "Figure_S1.png",
+    "caption": "Figure S1. Source-frame-0 minimum PHE6-PHE55 heavy-atom distance at all six stored HPacker stages. Points and labels use direct three-dimensional PDB distances. The dashed line marks 1.6 Å; contact is strictly below it. Connecting lines indicate stage order, not a continuous dynamical path."
+  },
+  {
+    "type": "paragraph",
+    "text": "The complete-alternation IDs are: 010101 (10 frames): 0, 10, 34, 53, 73, 83, 88, 167, 180, 191; 101010 (15 frames): 14, 28, 49, 60, 66, 77, 113, 126, 134, 137, 141, 145, 160, 165, 190. The shared denominator is 200. Figure 2 uses the first of these examples without structural regeneration, stage-specific alignment or camera changes."
+  },
+  {
+    "type": "paragraph",
+    "text": "Closest atom pairs in source 0 (PHE6 atom-PHE55 atom), stages 0-5: CD1-CA, CD1-CZ, CD2-CA, CD1-CE2, CD2-CA, CD1-CE2. Distances rounded to 3 decimals are 4.291, 0.633, 4.037, 0.560, 4.030, 0.277 Å. Backbone atoms are included in the residue-level heavy-atom criterion; the diagrams do not imply a ring-only distance definition. Full unrounded geometry and atom identities are in data/authoritative/Figure_2_Source_0.csv."
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "S4. Exploratory interventions and NN diagnostics"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S4.1. Original pulse and χ-intervention mapping"
+  },
+  {
+    "type": "paragraph",
+    "text": "In the masking branch, selected non-backbone side-chain atoms are filtered consistently from neighborhood arrays res_ids, atom_names, elements, coords and charges. The PDB residue itself remains present. For lag, the selected side-chain coordinates temporarily come from stored stage s-2 while neighborhood features are built, after which the original coordinates are restored. The frozen runner rejects lag at s < 2. A later χ substitution edits predicted torsions before Cartesian side-chain reconstruction, not merely the returned angle record. Earlier output-only edits are not promoted to valid structural interventions."
+  },
+  {
+    "type": "table",
+    "id": "Table_S2A_1"
+  },
+  {
+    "type": "paragraph",
+    "text": "For the source-0 branch, “third” is a stored operation label: the actual perturbed residue is 55, the target is 6 and the measured partner is 58. Source 0 receives a subsequent stage-3 χ edit at residue 17. Source 1 receives a stage-2 χ edit at residue 56. Original rescue and sufficiency branches reverse which stored χ vector is imposed on the branch/original background; these are operational selected probes, not proof of a general causal mediator. Archived code and receipts preserve both branches. Historical mutant cases present in untouched source ZIPs are outside this WT200 analysis."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S4.2. Downstream blocking"
+  },
+  {
+    "type": "table",
+    "id": "Table_S2A_2"
+  },
+  {
+    "type": "paragraph",
+    "text": "The v8.2 implementation retains the earlier rescue χ edit and, one stage later, substitutes selected downstream residues’ χ values from the original pulse branch before reconstruction. The five block receipts and their saved stage PDBs identify the same stage/residue assignments as the code. P1 checked receipt hashes and forced-versus-saved χ values. These selected path-specific blocks do not establish unique necessity, sufficiency or a complete residue-level mechanism."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S4.3. Saved-array diagnostics"
+  },
+  {
+    "type": "paragraph",
+    "text": "Ten source-stage donor→receiver examples were selected retrospectively: four larger-response and six weaker-response paths. Donor means the side chain whose coordinates were restored for the receiver’s neighborhood diagnostic; it is not an assertion of physiological signaling. The feature metric is the L2 norm of Zernikegram differences. Raw max |Δ| is the maximum absolute difference among the saved eight sin/cos components. χ differences use |((a-b+180) mod 360)-180|, then the maximum over available torsions; no chemical symmetry correction is applied. All figures in Table S2B derive from saved arrays, not new inference."
+  },
+  {
+    "type": "table",
+    "id": "Table_S2B"
+  },
+  {
+    "type": "paragraph",
+    "text": "Table S2B keys map to exact original result.json and model_arrays.npz paths in data/authoritative/NN_File_Crosswalk.csv. Their hashes are in SHA256SUMS.txt. In each saved comparison, restored and rescue vectors match. Nonzero raw differences in weaker cases do not imply a binary strong/weak class or a mechanistic threshold. The historical Phase 2B patch arrays support 16 donor-output comparisons at the saved-array level; source raw arrays for some identity/read-only sham controls remain unavailable. P1 does not elevate those controls to full independent replay."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S4.4. One selected full-batch receipt"
+  },
+  {
+    "type": "paragraph",
+    "text": "data/e2/selected_full_batch/x4_full_batch_replay/original_result.json records source 0, source stage 4, predicted next stage 5, donor 53, receiver 55, batch size 54 and receiver index 46 (zero-based). It links exact blocked/rescue PDB SHA-256 and stored arrays. The archived raw maximum difference is 0.1410191357 and circular χ maximum is 54.08876634°. Reported next-stage χ deviations from stored structures are 0.06389236° (blocked) and 0.59575412° (rescue); this is not bitwise regenerated structure parity."
+  },
+  {
+    "type": "paragraph",
+    "text": "P1 verified the two PDB identities and inspected the receipt. It did not rerun this trained forward, extend it to ten paths, repeat full-feedback HPacker reconstruction or authenticate every earlier sham. The replay script is supplied as historical source, separate from the read-only P1 verification commands."
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "S5. OpenMM methods and continuation"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S5.1. Input identity and system preparation"
+  },
+  {
+    "type": "paragraph",
+    "text": "The four inputs are source 0/1 original stage 5 and their v8.1 locally perturbed stage-5 counterparts. Per-run environment.json records their input SHA-256; P1 matched all four against both the Phase C kit and Stage A v2 input PDBs. The worker START event itself says verified_by_parent rather than repeating the digest: this is parent-environment/runtime provenance, not an independent operating-system file-access trace."
+  },
+  {
+    "type": "paragraph",
+    "text": "The historical runs used Python 3.13.1, OpenMM 8.2.0, MDTraj 1.11.2 and NumPy 2.5.4. The fixed BioEmu source adds a C-terminal OXT, then hydrogens and solvent. AMBER99SB (amber99sb.xml) and TIP3P (tip3p.xml), 1.0-nm padding, 0.1 M NaCl, PME with 1.0-nm cutoff, hydrogen-bond constraints and rigid water were used. Each input has 494 protein heavy atoms; the returned final protein structure has 495 including OXT. The contact criterion excludes adjacent/same-residue terms, and all four final structures have zero qualifying pairs."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S5.2. Integrator, restraints and actual platform"
+  },
+  {
+    "type": "paragraph",
+    "text": "After setting coordinates/thermal velocities and applying constraints (1e-7), minimizeEnergy was called with source-default settings. Langevin integration at 300 K used initial friction 200 ps⁻¹ and constraint tolerance 1e-5. Four stabilization blocks of 0.1 ps each used timesteps 1e-6, 1e-5, 1e-4 and 1e-3 ps: 100,000 + 10,000 + 1,000 + 100 steps. NVT then used 100,000 steps at 0.001 ps and friction 10 ps⁻¹ (0.1 ns). NPT used 400,000 steps, friction 1 ps⁻¹ and a 1-bar MonteCarloBarostat (0.4 ns). Total: 611,100 steps and 0.5004 ns. No free-production phase was executed (simtime_ns=0)."
+  },
+  {
+    "type": "paragraph",
+    "text": "The positional potential is k × periodicdistance² with numerical k=1000 in OpenMM’s kJ/mol and nm unit convention, not a silently substituted ½kx² parameterization. It remains active throughout. The code selects atom names N, CA, C and O across the whole system; water oxygens named O can therefore also be restrained. These records must not be called unrestrained or protein-backbone-only free MD. Actual saved platform properties are OpenCL / single precision on Intel Iris Xe Graphics, irrespective of the original CPU-oriented task plan. Stepping probes split calls into chunks ≤1,000 and add synchronization; the stochastic path can differ from an uninstrumented invocation."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S5.3. Completion records"
+  },
+  {
+    "type": "table",
+    "id": "Table_S3"
+  },
+  {
+    "type": "paragraph",
+    "text": "P1 checked continuity of requested/completed steps, the four COMPLETE/exit records, finite saved energy/position/velocity/force checkpoints, final-PDB hashes and final contact geometry. This verifies the recorded continuation outcomes; it does not rerun MD, prove finite values at every unrecorded integration step, establish comparative success rates or permit ranking differently solvated systems by final potential energy. Main-text Table 4 intentionally contains only initial-input and final-MD counts."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S5.4. Separate WT0 minimization-only structures"
+  },
+  {
+    "type": "paragraph",
+    "text": "The independently archived M2 run outputs/m2_wt0_20261023_140630 contains baseline_minimized_heavy.pdb and rescue_minimized_heavy.pdb. Direct geometry gives zero qualifying pairs in each. These are a separate WT source-0 minimization-only execution, not Phase C intermediate coordinates. No WT1 minimization-only PDB or verified close-pair count is available in the supplied evidence. AFTER_MIN energy records cannot supply a coordinate-based contact count. P1 neither generated missing checkpoints nor inferred WT1 values."
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "S6. Protein heavy-atom LJ proxy"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S6.1. Pair set and parameters"
+  },
+  {
+    "type": "paragraph",
+    "text": "Stage A evaluates the common 494 original protein heavy atoms, with 116,140 eligible nonadjacent interresidue pairs per structure (464,560 pair rows total). Same-residue and adjacent-residue pairs and zero-epsilon exclusions are omitted. AMBER99SB nonbonded parameters come from the historical protein-only NoCutoff surrogate; Lorentz-Berthelot mixing uses arithmetic σ and geometric ε. Original NonbondedForce exception parameters are honored where applicable. Temporary OXT and added hydrogens enable force-field typing only and are excluded from the analyzed 494-heavy-atom pair set."
+  },
+  {
+    "type": "paragraph",
+    "text": "Each pair contributes 4ε[(σ/r)¹²-(σ/r)⁶], with r and σ in nm, ε and energy in kJ/mol. No solvent, ion, electrostatic, bonded, hydrogen-containing-pair or whole-system term is included. The historical Phase1A audit independently checked parameter typing (952 particles and 5,144 exceptions in the typing systems); P1 retained that evidence but did not repeat system construction or hydrogen optimization. P1 recalculated pairwise arithmetic from the archived σ/ε values and measured every analyzed pair distance from the original PDBs."
+  },
+  {
+    "type": "figure",
+    "file": "Figure_S2.png",
+    "caption": "Figure S2. Positive archived net protein heavy-atom LJ proxy values for the two selected original/locally perturbed pairs, on a logarithmic y axis. Connecting lines identify paired selected structures, not a thermodynamic path. Values use archived Stage A summaries; Table S4 separates coordinate precision and CSV-summation variants."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S6.2. Precision and accumulation pathways"
+  },
+  {
+    "type": "table",
+    "id": "Table_S4A"
+  },
+  {
+    "type": "paragraph",
+    "text": "The archived coordinate route rounds PDB-derived nm coordinates through float32 before distance evaluation. P1 reproduced saved pair distances from this route to less than 1e-12 Å. Direct float64 calculations from the original 0.001-Å PDB coordinates are a different numerical route; the original source-0 minimum distance is 0.2772742325 Å, compared with 0.2772704097 Å in saved LJ rows. The r⁻¹² term amplifies that small difference. Finite decimal CSV entries and different accumulation order also produce tiny relative differences between pair sums and summary totals. The archived summary, saved CSV sum and PDB-double result remain separate; none is relabeled as an identical value."
+  },
+  {
+    "type": "table",
+    "id": "Table_S4B"
+  },
+  {
+    "type": "paragraph",
+    "text": "The dominant pair’s contribution to the net proxy reduction is computed from its archived pair-energy decrease divided by the archived total decrease. The same atom identities are tracked in the locally perturbed structure. These results describe a restricted arithmetic consequence of extreme proximity. They are not a decomposition of the solvated Phase C potential, a stability ranking or evidence about folding free energy."
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "S7. Reproducibility and evidence boundaries"
+  },
+  {
+    "type": "table",
+    "id": "Table_S5"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S7.1. Read-only verification commands"
+  },
+  {
+    "type": "code",
+    "text": "python code/verify_e1_from_pdb.py --root . --out verification/recheck\npython code/verify_supporting_records.py --root . --out verification/recheck\npython code/verify_package_hashes.py ."
+  },
+  {
+    "type": "paragraph",
+    "text": "Run from the unpacked Zenodo candidate using Python ≥3.10 and NumPy. The E1 verifier checks the full source/stage grid, SHA manifest, receipt SHA where present, finite/unique atom identities, all original stage-table fields, strict sequence definitions and frozen expected JSON. The supporting verifier checks saved arrays/receipts, Phase C logs and coordinates, separate WT0 M2 structures, and the complete pairwise LJ arithmetic. No model installation, weights, OpenMM invocation or MD is required. GitHub omits full PDB and large E2/E4 data: use the matching Zenodo candidate for complete rechecks, as explained in REPRODUCIBILITY.md."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "S7.2. Chronology and unresolved boundaries"
+  },
+  {
+    "type": "paragraph",
+    "text": "The core archive was summarized on 21 October 2026; selected continuation and Stage A ended on 23 October. Published v1.0.0 is a separate historical release. The 27 October P1 production revised exposition, strict-counter reporting, traceability and packaging without new scientific execution. Version 1.1.0 bears the reserved version DOI 10.5281/zenodo.23717073; DOI registration and record availability occur upon Zenodo publication. Historical P1 self-QC and subsequent P2 checks are distinguished from scientific experiments."
+  },
+  {
+    "type": "paragraph",
+    "text": "The named corrected outer ZIP and its README were not attached. All 14 specified constituent inputs were present separately and matched ATTACHMENT_MANIFEST.csv exactly by byte size and SHA-256, including renamed Phase C and verification files. Nested original ZIPs were indexed recursively and duplicate content identified by SHA. Windows backslash member names were normalized only for extracted working/package copies; original source ZIP bytes were preserved. Reference N1 and NT-BE/X2-ω PDFs informed editing only and supplied no X4 scientific evidence, conditions or licenses."
+  },
+  {
+    "type": "paragraph",
+    "text": "The source archive and associated GitHub materials document the provenance and reproducibility limits. Original simulation dates and earlier validation records have been preserved. Author has reviewed rights, funding, interests and acknowledgments. The live source retrieval limitation and unavailable full-archive MD5 are disclosed, not marked PASS. No new BioEmu generation, HPacker inference, NN intervention, minimization, MD, public upload, push or metadata update was performed."
+  }
+]

@@ -1,0 +1,10 @@
+Stage / endpoint,General frames / 200,PHE6-PHE55 frames / 200
+0,183,39
+1,148,22
+2,140,25
+3,128,23
+4,130,29
+5,134,21
+Union,196,67
+Ordered recontact,147 (strict same atom),43 (residue pair)
+Full alternation,Not defined,25 = 10 + 15

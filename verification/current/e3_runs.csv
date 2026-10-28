@@ -1,0 +1,5 @@
+case,source,structure,initial_pairs,final_pairs,particles,waters,steps,energy_states,platform,precision,final_PE,completion,input_sha256,events_file
+wt0_baseline,0,Original,6,0,11164,3395,611100,226,OpenCL,single,-143055.18170290324,Completed,436b4995664c81ab64e97c57f4b879eb1dc5d5f3146dd627081fe48c509f114f,data/e3/phase_c/outputs_phase_c/wt0_baseline_20261023_163125/events.jsonl
+wt0_v8_1_rescue,0,Locally perturbed,1,0,11461,3494,611100,226,OpenCL,single,-146432.78906247218,Completed,25ba1f07865fc074b99296fa809d832821dd8b5abd23fa909f3de3f43bd969e8,data/e3/phase_c/outputs_phase_c/wt0_v8_1_rescue_20261023_171332/events.jsonl
+wt1_baseline,1,Original,3,0,11404,3475,611100,226,OpenCL,single,-145726.6501934739,Completed,81d4034a6df8ff933e6b27e04ff6cfd058763b4770e22771774c77c6047ad84b,data/e3/phase_c/outputs_phase_c/wt1_baseline_20261023_175323/events.jsonl
+wt1_v8_1_rescue,1,Locally perturbed,1,0,11383,3468,611100,226,OpenCL,single,-146144.45185789932,Completed,90dd4ede7523b32f3a6b68eeb56768b874031619a15ac1fc27e41b8caf028d6b,data/e3/phase_c/outputs_phase_c/wt1_v8_1_rescue_20261023_182938/events.jsonl

@@ -1,0 +1,49 @@
+{
+  "checked_date": "2026-10-27",
+  "repository": "shomiyazaki-ai/hpacker-stagewise-proximity-x4",
+  "files": [
+    {
+      "path": "README.md",
+      "git_blob_sha": "6462c2657a26c65f8245994df588ecf8827fc3e9",
+      "status": "read via connected GitHub API"
+    },
+    {
+      "path": "LICENSES/LICENSE_SCOPE.md",
+      "git_blob_sha": "ec950c3cb908986ccf9967af0f4233e0d4f08b8a",
+      "status": "read via connected GitHub API"
+    },
+    {
+      "path": "CITATION.cff",
+      "git_blob_sha": "6b940cdc1735d1f0a9c33be86b885cb2ec495631",
+      "status": "read via connected GitHub API"
+    }
+  ],
+  "upstream": [
+    {
+      "repository": "microsoft/bioemu",
+      "path": "src/bioemu/md_utils.py",
+      "ref": "42c551133f9825f4ec01812075b0d50e268c2209",
+      "git_blob_sha": "c199a447b161413b2dd2effc179a3cbcb2f356c7",
+      "status": "read; archived with MIT notice"
+    },
+    {
+      "repository": "microsoft/bioemu-benchmarks",
+      "path": "README.md",
+      "git_blob_sha": "49f1d31331ee85ec21401c6184d00f3224274c16",
+      "status": "read; dataset licensing statement retained"
+    },
+    {
+      "repository": "gvisani/hpacker",
+      "path": "README.md",
+      "status": "read; primary repo and publication identify correct upstream"
+    },
+    {
+      "repository": "Graylab/HPacker",
+      "status": "404 through connected API"
+    }
+  ],
+  "zenodo_live_check": "NOT VERIFIED: record, DOI and API routes inaccessible/rate-limited",
+  "live_repository_full_byte_comparison": false,
+  "byte_baseline": "attached X4_Supporting_Data_and_Code_v1.0.0.zip SHA256 98f0bef01e3cc864d37563ab1d0d9a519f7f38fbe75c24b489ab7c299cc50977",
+  "no_public_mutations": true
+}

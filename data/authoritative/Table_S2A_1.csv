@@ -1,0 +1,3 @@
+Source,Pulse stage,Operation,Target residue,Perturbed residue,Measured partner,χ edit stage / residue
+0,2,third lag,6,55,58,3 / 17
+1,1,partner mask,55,6,6,2 / 56

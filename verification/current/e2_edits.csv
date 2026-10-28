@@ -1,0 +1,5 @@
+source,kind,stage,residue,receipt
+1,sufficiency,2,56,data/e2/v81/hpacker_mediation_v8_1_results/WT_source001/sufficiency/receipt.json
+1,rescue,2,56,data/e2/v81/hpacker_mediation_v8_1_results/WT_source001/rescue/receipt.json
+0,sufficiency,3,17,data/e2/v81/hpacker_mediation_v8_1_results/WT_source000/sufficiency/receipt.json
+0,rescue,3,17,data/e2/v81/hpacker_mediation_v8_1_results/WT_source000/rescue/receipt.json

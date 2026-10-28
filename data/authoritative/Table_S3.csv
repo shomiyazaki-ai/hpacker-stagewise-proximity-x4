@@ -1,0 +1,5 @@
+Case,Particles,Waters,Steps,Energy states,Final PE (kJ/mol),Platform / precision
+s0 original,11164,3395,611100,226,-143055.181703,OpenCL / single
+s0 perturbed,11461,3494,611100,226,-146432.789062,OpenCL / single
+s1 original,11404,3475,611100,226,-145726.650193,OpenCL / single
+s1 perturbed,11383,3468,611100,226,-146144.451858,OpenCL / single

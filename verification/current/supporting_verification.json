@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "e2_paths": 10,
+  "e2_block_cases": 5,
+  "e2_receipt_files_hashed": 120,
+  "e2_forward_executed": false,
+  "e3_runs": 4,
+  "e3_input_runtime_environment_sha_matches": 4,
+  "e3_final_zero_pairs": 4,
+  "e3_separate_m2_structures": 2,
+  "e4_pairs_per_structure": 116140,
+  "e4_pairwise_total": 464560,
+  "e4_new_forcefield_typing": false,
+  "md_executed": false
+}

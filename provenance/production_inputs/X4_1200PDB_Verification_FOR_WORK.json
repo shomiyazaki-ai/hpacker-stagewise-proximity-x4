@@ -1,0 +1,45 @@
+{
+  "result": {
+    "structures": 1200,
+    "general_stage_counts": [
+      183,
+      148,
+      140,
+      128,
+      130,
+      134
+    ],
+    "phe655_stage_counts": [
+      39,
+      22,
+      25,
+      23,
+      29,
+      21
+    ],
+    "strict_same_atom_recontact": 147,
+    "phe655_residue_pair_recontact": 43
+  },
+  "expected": {
+    "structures": 1200,
+    "general_stage_counts": [
+      183,
+      148,
+      140,
+      128,
+      130,
+      134
+    ],
+    "phe655_stage_counts": [
+      39,
+      22,
+      25,
+      23,
+      29,
+      21
+    ],
+    "strict_same_atom_recontact": 147,
+    "phe655_residue_pair_recontact": 43
+  },
+  "status": "PASS"
+}

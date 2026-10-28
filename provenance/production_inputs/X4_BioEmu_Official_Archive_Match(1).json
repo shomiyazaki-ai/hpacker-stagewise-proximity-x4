@@ -1,0 +1,64 @@
+{
+  "archive": "samples_delta_G.zip",
+  "archive_size_bytes": 1959113732,
+  "candidates": [
+    {
+      "path": "delta_G//2K2A__S50L_T52N/samples.xtc",
+      "size_bytes": 259356,
+      "crc32": "b92c22a6",
+      "sha256": "bf7f8027c49354d1dbb310ace5a6f5df1d21679f8316cefd578ada982e077ee4",
+      "matches_saved_WT_input": false
+    },
+    {
+      "path": "delta_G//2K2A__S50L_T52N/topology.pdb",
+      "size_bytes": 25163,
+      "crc32": "9771caff",
+      "sha256": "9a417d95f75dcb1cc74ba42f82ed79138c337d9411c1685e669424bfab652c28",
+      "matches_saved_WT_input": false
+    },
+    {
+      "path": "delta_G//2K2A__R7A/samples.xtc",
+      "size_bytes": 388636,
+      "crc32": "1116c7fe",
+      "sha256": "e24ff822495095cfb864fc47b8dbfcdd40928f1492300b9bb7d295aeb488dcab",
+      "matches_saved_WT_input": false
+    },
+    {
+      "path": "delta_G//2K2A__R7A/topology.pdb",
+      "size_bytes": 25163,
+      "crc32": "ae50989f",
+      "sha256": "80a8709dacbc6b515c0c47728672047c5104ba83eb3b4ff2ecd7d8e71de75fd0",
+      "matches_saved_WT_input": false
+    },
+    {
+      "path": "delta_G//2K2A__S50I_T52D/samples.xtc",
+      "size_bytes": 259300,
+      "crc32": "a5dab0c5",
+      "sha256": "99b97c3d1f5fac662611f298c71129e33e541e9f8c7fc61784fc805567285114",
+      "matches_saved_WT_input": false
+    },
+    {
+      "path": "delta_G//2K2A__S50I_T52D/topology.pdb",
+      "size_bytes": 25163,
+      "crc32": "89436956",
+      "sha256": "2ed0305cb932acb19a4c2447f1c4ad509e58d1d1c534f8911895877ec1c2ad17",
+      "matches_saved_WT_input": false
+    },
+    {
+      "path": "delta_G//2K2A/samples.xtc",
+      "size_bytes": 258900,
+      "crc32": "8b03ff87",
+      "sha256": "0f42d6d669f5e1c765d0be9299aafc3f127676800d72bfee0c3c4e511ff790b9",
+      "matches_saved_WT_input": true
+    },
+    {
+      "path": "delta_G//2K2A/topology.pdb",
+      "size_bytes": 25163,
+      "crc32": "ec0222da",
+      "sha256": "ad00dcbeec51b8941430bba94eadb4226a1e3e495e6644bce9492a193bf10798",
+      "matches_saved_WT_input": true
+    }
+  ],
+  "archive_entry_count": 3196,
+  "errors": []
+}

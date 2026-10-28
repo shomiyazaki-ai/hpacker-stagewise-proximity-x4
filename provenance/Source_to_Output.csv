@@ -1,0 +1,20 @@
+output,structured_source,primary_or_recomputed_evidence,production_code
+Table_1,data/authoritative/Table_1.csv,verification/current/e1_stages.csv; verification/current/e1_frames.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_2,data/authoritative/Table_2.csv,data/e4/inputs,source/freeze_tables.py; source/build_pdfs.py
+Table_3,data/authoritative/Table_3.csv,verification/current/e2_paths.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_4,data/authoritative/Table_4.csv,verification/current/e3_runs.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_5,data/authoritative/Table_5.csv,verification/current/e4_lj.csv; verification/current/e4_tracked_pairs.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_S1,data/authoritative/Table_S1.csv,verification/current/e1_stages.csv; verification/current/e1_frames.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_S2A_1,data/authoritative/Table_S2A_1.csv,data/e2/v81; data/e2/v82,source/freeze_tables.py; source/build_pdfs.py
+Table_S2A_2,data/authoritative/Table_S2A_2.csv,data/e2/v81; data/e2/v82,source/freeze_tables.py; source/build_pdfs.py
+Table_S2B,data/authoritative/Table_S2B.csv,verification/current/e2_paths.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_S3,data/authoritative/Table_S3.csv,verification/current/e3_runs.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_S4A,data/authoritative/Table_S4A.csv,verification/current/e4_lj.csv; verification/current/e4_tracked_pairs.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_S4B,data/authoritative/Table_S4B.csv,verification/current/e4_lj.csv; verification/current/e4_tracked_pairs.csv,source/freeze_tables.py; source/build_pdfs.py
+Table_S5,data/authoritative/Table_S5.csv,data/pdb; data/e2; data/e3; data/e4; verification/current,source/freeze_tables.py; source/build_pdfs.py
+Figure_1,data/expected_e1.json,data/expected_e1.json,source/make_figures.py
+Figure_2,data/pdb/WT_source000/stage_00.pdb through stage_05.pdb; data/authoritative/Figure_2_Source_0.csv,data/pdb/WT_source000/stage_00.pdb through stage_05.pdb; data/authoritative/Figure_2_Source_0.csv,source/make_figures.py
+Figure_S1,data/authoritative/Figure_2_Source_0.csv,data/authoritative/Figure_2_Source_0.csv,source/make_figures.py
+Figure_S2,data/e4/results/stage_a_summary.json; verification/current/e4_lj.csv,data/e4/results/stage_a_summary.json; verification/current/e4_lj.csv,source/make_figures.py
+Technical_Note_REVISED_RC.pdf,source/Technical_Note.json; source/Technical_Note.md,authoritative tables and specified figures,source/author_documents.py; source/build_pdfs.py
+Supplementary_Information_REVISED_RC.pdf,source/Supplementary_Information.json; source/Supplementary_Information.md,authoritative tables and specified figures,source/author_documents.py; source/build_pdfs.py

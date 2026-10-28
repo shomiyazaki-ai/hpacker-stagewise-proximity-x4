@@ -1,0 +1,597 @@
+{
+  "Table_1": {
+    "headers": [
+      "Endpoint",
+      "Definition across stages 0-5",
+      "Frames / 200"
+    ],
+    "rows": [
+      [
+        "General union",
+        "Any qualifying atom pair in at least one stage",
+        "196"
+      ],
+      [
+        "Strict same-atom recontact",
+        "The same unordered atom pair: present, absent, present at i < j < k",
+        "147"
+      ],
+      [
+        "PHE6-PHE55 union",
+        "Residue pair close in at least one stage",
+        "67"
+      ],
+      [
+        "PHE6-PHE55 recontact",
+        "Residue-pair binary sequence: contact, absence, contact",
+        "43"
+      ],
+      [
+        "Complete PHE alternation",
+        "010101 (10) or 101010 (15)",
+        "25"
+      ]
+    ],
+    "caption": "Table 1. Fixed-ensemble sequence endpoints.",
+    "footnote": "All denominators are the same 200 source frames. Strict atom-pair recontact and residue-pair recontact are different endpoints. The historical 153 counter is superseded for strict recontact."
+  },
+  "Table_2": {
+    "headers": [
+      "Metric (source 0, stage 5)",
+      "Original",
+      "Locally perturbed"
+    ],
+    "rows": [
+      [
+        "PHE6-PHE55 minimum distance (Å)",
+        "0.277274",
+        "1.881472"
+      ],
+      [
+        "PHE6-PHE55 atom pairs <1.6 Å",
+        "5",
+        "0"
+      ],
+      [
+        "General atom pairs <1.6 Å",
+        "6",
+        "1"
+      ]
+    ],
+    "caption": "Table 2. Selected pre-relaxation local geometry.",
+    "footnote": "The perturbed structure still has one general close pair (minimum 1.550220 Å); separating PHE6-PHE55 does not remove every extreme proximity."
+  },
+  "Table_3": {
+    "headers": [
+      "Source",
+      "Stage",
+      "Donor → receiver",
+      "Max raw-output |Δ|",
+      "Max circular χ |Δ| (°)"
+    ],
+    "rows": [
+      [
+        "0",
+        "4",
+        "53 → 55",
+        "0.141019",
+        "54.088766"
+      ],
+      [
+        "1",
+        "3",
+        "55 → 3",
+        "1.369136",
+        "148.689018"
+      ],
+      [
+        "1",
+        "3",
+        "55 → 56",
+        "1.671166",
+        "178.328796"
+      ],
+      [
+        "1",
+        "3",
+        "55 → 59",
+        "0.752588",
+        "52.082260"
+      ]
+    ],
+    "caption": "Table 3. Four selected stronger NN-response examples.",
+    "footnote": "Raw eight-component output differences are dimensionless, not probabilities. Selection is post hoc; circular χ differences have no chemical symmetry correction. See Table S2B for all ten saved-array comparisons and the separate selected full-batch receipt."
+  },
+  "Table_4": {
+    "headers": [
+      "Source",
+      "Structure",
+      "Initial pairs\n<1.6 Å",
+      "Final MD pairs\n<1.6 Å",
+      "Completion"
+    ],
+    "rows": [
+      [
+        "0",
+        "Original",
+        "6",
+        "0",
+        "Completed"
+      ],
+      [
+        "0",
+        "Locally perturbed",
+        "1",
+        "0",
+        "Completed"
+      ],
+      [
+        "1",
+        "Original",
+        "3",
+        "0",
+        "Completed"
+      ],
+      [
+        "1",
+        "Locally perturbed",
+        "1",
+        "0",
+        "Completed"
+      ]
+    ],
+    "caption": "Table 4. Initial inputs and final short-MD structures.",
+    "footnote": "These are two matched timepoints per selected Phase C case. No minimization-only checkpoint is inserted. The separate WT0 M2 results appear in S5.4; WT1 minimized geometry is unavailable."
+  },
+  "Table_5": {
+    "headers": [
+      "Source",
+      "Structure",
+      "Archived LJ proxy\n(kJ/mol)",
+      "Tracked baseline-dominant pair",
+      "Same-pair\ndistance (Å)"
+    ],
+    "rows": [
+      [
+        "0",
+        "Original",
+        "+1.661683e+13",
+        "6:PHE:CD1 - 55:PHE:CE2",
+        "0.277"
+      ],
+      [
+        "0",
+        "Locally perturbed",
+        "+27,071.42",
+        "6:PHE:CD1 - 55:PHE:CE2",
+        "5.514"
+      ],
+      [
+        "1",
+        "Original",
+        "+9,951,309.66",
+        "6:PHE:CG - 55:PHE:CE2",
+        "0.916"
+      ],
+      [
+        "1",
+        "Locally perturbed",
+        "+27,582.95",
+        "6:PHE:CG - 55:PHE:CE2",
+        "6.336"
+      ]
+    ],
+    "caption": "Table 5. Restricted protein heavy-atom LJ proxy and tracked pairs.",
+    "footnote": "Values are archived summary outputs. The perturbed distance tracks the baseline-dominant atom pair, which need not remain the nearest pair. Coordinate precision comparisons are in Table S4. These are neither solvated potential energies nor free energies."
+  },
+  "Table_S1": {
+    "headers": [
+      "Stage / endpoint",
+      "General frames / 200",
+      "PHE6-PHE55 frames / 200"
+    ],
+    "rows": [
+      [
+        "0",
+        "183",
+        "39"
+      ],
+      [
+        "1",
+        "148",
+        "22"
+      ],
+      [
+        "2",
+        "140",
+        "25"
+      ],
+      [
+        "3",
+        "128",
+        "23"
+      ],
+      [
+        "4",
+        "130",
+        "29"
+      ],
+      [
+        "5",
+        "134",
+        "21"
+      ],
+      [
+        "Union",
+        "196",
+        "67"
+      ],
+      [
+        "Ordered recontact",
+        "147 (strict same atom)",
+        "43 (residue pair)"
+      ],
+      [
+        "Full alternation",
+        "Not defined",
+        "25 = 10 + 15"
+      ]
+    ],
+    "caption": "Table S1. Complete fixed-ensemble counts.",
+    "footnote": "Stage 0 is the initial HPacker prediction; stages 1-5 are refinement updates, not physical time. Contact requires a distance strictly below 1.6 Å."
+  },
+  "Table_S2A_1": {
+    "headers": [
+      "Source",
+      "Pulse stage",
+      "Operation",
+      "Target residue",
+      "Perturbed residue",
+      "Measured partner",
+      "χ edit stage / residue"
+    ],
+    "rows": [
+      [
+        "0",
+        "2",
+        "third lag",
+        "6",
+        "55",
+        "58",
+        "3 / 17"
+      ],
+      [
+        "1",
+        "1",
+        "partner mask",
+        "55",
+        "6",
+        "6",
+        "2 / 56"
+      ]
+    ],
+    "caption": "Table S2A-1. Original local-input pulses and subsequent pre-Cartesian χ interventions.",
+    "footnote": "The source-0 third_lag branch targets residue 6, perturbs residue 55 and measures partner 58. χ rescue uses baseline χ on the pulse background; the paired archived sufficiency probe uses branch χ on the original background. These operational names do not establish unique causal necessity or sufficiency."
+  },
+  "Table_S2A_2": {
+    "headers": [
+      "Source",
+      "Block stage",
+      "Blocked residue(s)",
+      "Operation"
+    ],
+    "rows": [
+      [
+        "0",
+        "4",
+        "53",
+        "Original-branch χ substituted before reconstruction on rescue background"
+      ],
+      [
+        "1",
+        "3",
+        "3",
+        "Original-branch χ substituted before reconstruction on rescue background"
+      ],
+      [
+        "1",
+        "3",
+        "55",
+        "Original-branch χ substituted before reconstruction on rescue background"
+      ],
+      [
+        "1",
+        "3",
+        "55+59+3",
+        "Original-branch χ substituted before reconstruction on rescue background"
+      ],
+      [
+        "1",
+        "3",
+        "59",
+        "Original-branch χ substituted before reconstruction on rescue background"
+      ]
+    ],
+    "caption": "Table S2A-2. Five downstream χ blocks.",
+    "footnote": "The preceding rescue χ edit is retained: source 0 stage 3 residue 17; source 1 stage 2 residue 56. The blocks are path-specific selected perturbations."
+  },
+  "Table_S2B": {
+    "headers": [
+      "Key",
+      "Source / stage",
+      "Donor → receiver",
+      "Zernikegram L2",
+      "Raw max |Δ|",
+      "Circular χ max |Δ| (°)",
+      "Tier"
+    ],
+    "rows": [
+      [
+        "N006",
+        "0 / 4",
+        "53 → 6",
+        "0.056752",
+        "0.035291",
+        "0.239754",
+        "A"
+      ],
+      [
+        "N025",
+        "0 / 4",
+        "53 → 25",
+        "0.041523",
+        "0.024820",
+        "0.053169",
+        "A"
+      ],
+      [
+        "N050",
+        "0 / 4",
+        "53 → 50",
+        "0.036039",
+        "0.005751",
+        "0.082947",
+        "A"
+      ],
+      [
+        "N055",
+        "0 / 4",
+        "53 → 55",
+        "0.067109",
+        "0.141019",
+        "54.088766",
+        "A; R"
+      ],
+      [
+        "N103",
+        "1 / 3",
+        "55 → 3",
+        "0.211317",
+        "1.369136",
+        "148.689018",
+        "A"
+      ],
+      [
+        "N111",
+        "1 / 3",
+        "55 → 11",
+        "0.100229",
+        "0.038130",
+        "0.305740",
+        "A"
+      ],
+      [
+        "N152",
+        "1 / 3",
+        "55 → 52",
+        "0.024546",
+        "0.013456",
+        "0.118828",
+        "A"
+      ],
+      [
+        "N153",
+        "1 / 3",
+        "55 → 53",
+        "0.137227",
+        "0.080839",
+        "0.079979",
+        "A"
+      ],
+      [
+        "N156",
+        "1 / 3",
+        "55 → 56",
+        "0.198319",
+        "1.671166",
+        "178.328796",
+        "A"
+      ],
+      [
+        "N159",
+        "1 / 3",
+        "55 → 59",
+        "0.231874",
+        "0.752588",
+        "52.082260",
+        "A"
+      ]
+    ],
+    "caption": "Table S2B. Ten selected saved-array NN comparisons.",
+    "footnote": "A = P1 independent array arithmetic, no trained forward. R = an archived one-point full-batch receipt exists only for N055 (source 0, stage 4, donor 53 → receiver 55); P1 inspected it without rerunning it. Exact array/result paths are in NN_File_Crosswalk.csv. Strong/weak selection is retrospective."
+  },
+  "Table_S3": {
+    "headers": [
+      "Case",
+      "Particles",
+      "Waters",
+      "Steps",
+      "Energy states",
+      "Final PE (kJ/mol)",
+      "Platform / precision"
+    ],
+    "rows": [
+      [
+        "s0 original",
+        "11164",
+        "3395",
+        "611100",
+        "226",
+        "-143055.181703",
+        "OpenCL / single"
+      ],
+      [
+        "s0 perturbed",
+        "11461",
+        "3494",
+        "611100",
+        "226",
+        "-146432.789062",
+        "OpenCL / single"
+      ],
+      [
+        "s1 original",
+        "11404",
+        "3475",
+        "611100",
+        "226",
+        "-145726.650193",
+        "OpenCL / single"
+      ],
+      [
+        "s1 perturbed",
+        "11383",
+        "3468",
+        "611100",
+        "226",
+        "-146144.451858",
+        "OpenCL / single"
+      ]
+    ],
+    "caption": "Table S3. Four archived Phase C continuation records.",
+    "footnote": "Each case has exit code 0, 204 matched begin/end calls, one COMPLETE record and no recorded nonfinite energy/position/velocity/force flags. Integration duration is 0.5004 ns, including four 0.1-ps stabilization stages. Solvent counts differ; final PE values cannot be ranked as stability."
+  },
+  "Table_S4A": {
+    "headers": [
+      "Source / structure",
+      "Archived summary (kJ/mol)",
+      "Archived CSV sum (kJ/mol)",
+      "PDB-double recomputation (kJ/mol)"
+    ],
+    "rows": [
+      [
+        "0 / Original",
+        "1.66168e+13",
+        "1.66168e+13",
+        "1.66141e+13"
+      ],
+      [
+        "0 / Locally perturbed",
+        "27071.4",
+        "27071.4",
+        "27071.3"
+      ],
+      [
+        "1 / Original",
+        "9.95131e+06",
+        "9.95131e+06",
+        "9.9511e+06"
+      ],
+      [
+        "1 / Locally perturbed",
+        "27582.9",
+        "27582.9",
+        "27584.1"
+      ]
+    ],
+    "caption": "Table S4A. LJ coordinate-pathway and accumulation comparisons.",
+    "footnote": "Values are rounded to six significant figures for display. Complete values remain in Table_S4A.csv. Archived summary and CSV sum are not identical: for source-0 original the difference is about 10.25 kJ/mol (relative 6.17×10⁻¹³); rounding hides that distinction. PDB-double is a separate coordinate pathway."
+  },
+  "Table_S4B": {
+    "headers": [
+      "Source",
+      "Baseline-dominant pair",
+      "Original distance (Å)",
+      "Perturbed same-pair distance (Å)",
+      "Share of proxy reduction (%)"
+    ],
+    "rows": [
+      [
+        "0",
+        "6:PHE:CD1 - 55:PHE:CE2",
+        "0.277270",
+        "5.514235",
+        "99.9999991"
+      ],
+      [
+        "1",
+        "6:PHE:CG - 55:PHE:CE2",
+        "0.915895",
+        "6.335595",
+        "99.1752655"
+      ]
+    ],
+    "caption": "Table S4B. Same-pair distance and contribution tracking.",
+    "footnote": "Shares use the archived pair contribution and archived summary reduction. The measured pair is fixed by its baseline dominance, not by the nearest pair in the perturbed structure."
+  },
+  "Table_S5": {
+    "headers": [
+      "Claim",
+      "Evidence",
+      "Package file / directory",
+      "Verification tier"
+    ],
+    "rows": [
+      [
+        "E1 stage counts / recontact",
+        "1,200 original stage PDBs + receipts",
+        "data/pdb; provenance/PDB_SHA256_Manifest.csv",
+        "P1 independent geometry and SHA"
+      ],
+      [
+        "Source-0 local geometry",
+        "Original and perturbed stage-5 PDBs",
+        "data/e4/inputs; verification/current/e1_stages.csv",
+        "P1 independent geometry"
+      ],
+      [
+        "Ten NN-response comparisons",
+        "Saved NPZ vectors + result JSON",
+        "data/e2/v83; data/e2/v84; NN_File_Crosswalk.csv",
+        "P1 saved-array arithmetic"
+      ],
+      [
+        "One selected full-batch diagnostic",
+        "54-residue batch receipt, arrays, two PDBs",
+        "data/e2/selected_full_batch",
+        "Archived forward receipt inspected; no P1 forward"
+      ],
+      [
+        "Selected continuation",
+        "Four run environments, logs, summaries and final PDBs",
+        "data/e3/phase_c/outputs_phase_c",
+        "P1 log, SHA and final geometry"
+      ],
+      [
+        "Separate WT0 minimized geometry",
+        "Two M2 minimized PDBs",
+        "data/e3/separate_m2",
+        "P1 geometry; separate run"
+      ],
+      [
+        "Restricted LJ proxy",
+        "4×116,140 pair rows + selected input PDBs",
+        "data/e4/results; data/e4/inputs",
+        "P1 pairwise arithmetic / PDB doubles"
+      ],
+      [
+        "Force-field typing",
+        "Archived code and Phase1A parameter audit",
+        "code/archived_execution; provenance/phase1a_historical",
+        "Historical independent typing; no new typing"
+      ]
+    ],
+    "caption": "Table S5. Claim-evidence-file-verification map.",
+    "footnote": "Full file hashes are in SHA256SUMS.txt. Read-only verifiers are code/verify_e1_from_pdb.py and code/verify_supporting_records.py. No universal NN, HPacker or MD replay is claimed."
+  }
+}

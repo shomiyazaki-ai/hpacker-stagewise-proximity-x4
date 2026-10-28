@@ -1,0 +1,163 @@
+{
+  "zip_entries_verified": 3659,
+  "receipt_file_sha256_verified": 3592,
+  "frames": 200,
+  "stage_structures": 1200,
+  "general_final_close": 134,
+  "general_any_close": 196,
+  "general_same_atom_recontact": 153,
+  "phe_final_close": 21,
+  "phe_any_close": 67,
+  "phe_recontact": 43,
+  "phe_010101": 10,
+  "phe_101010": 15,
+  "phe_recontact_frames": [
+    0,
+    1,
+    10,
+    14,
+    27,
+    28,
+    32,
+    34,
+    42,
+    43,
+    49,
+    52,
+    53,
+    60,
+    62,
+    66,
+    68,
+    73,
+    77,
+    83,
+    88,
+    92,
+    93,
+    101,
+    113,
+    123,
+    126,
+    134,
+    137,
+    141,
+    145,
+    156,
+    157,
+    160,
+    165,
+    167,
+    168,
+    170,
+    173,
+    180,
+    190,
+    191,
+    194
+  ],
+  "stage_general_close": [
+    183,
+    148,
+    140,
+    128,
+    130,
+    134
+  ],
+  "stage_phe_close": [
+    39,
+    22,
+    25,
+    23,
+    29,
+    21
+  ],
+  "stage_general_min_median": [
+    0.9165346201699462,
+    1.236269741196018,
+    1.171404946567915,
+    1.342883876124831,
+    1.1256260760766585,
+    1.3218825731781032
+  ],
+  "patterns_top": [
+    [
+      "000000",
+      133
+    ],
+    [
+      "101010",
+      15
+    ],
+    [
+      "100000",
+      12
+    ],
+    [
+      "010101",
+      10
+    ],
+    [
+      "010000",
+      5
+    ],
+    [
+      "000101",
+      3
+    ],
+    [
+      "000100",
+      2
+    ],
+    [
+      "100010",
+      2
+    ],
+    [
+      "001010",
+      2
+    ],
+    [
+      "101000",
+      2
+    ],
+    [
+      "111111",
+      2
+    ],
+    [
+      "101011",
+      1
+    ]
+  ],
+  "min_phe_final": {
+    "frame": 191,
+    "phe655_pattern": "010101",
+    "phe655_recontact": 1,
+    "phe655_final_close": 1,
+    "phe655_any_close": 1,
+    "phe655_final_distance_A": 0.14923136399564516,
+    "phe655_min_distance_A": 0.14923136399564516,
+    "phe655_range_A": 1.7274862492855836,
+    "general_final_close": 1,
+    "general_any_close": 1,
+    "general_same_atom_recontact": 1,
+    "general_final_min_distance_A": 0.14923136399564513,
+    "general_final_pair_count": 7
+  },
+  "min_general_final": {
+    "frame": 157,
+    "phe655_pattern": "001010",
+    "phe655_recontact": 1,
+    "phe655_final_close": 0,
+    "phe655_any_close": 1,
+    "phe655_final_distance_A": 2.3283614410138362,
+    "phe655_min_distance_A": 0.5350943841977693,
+    "phe655_range_A": 1.8898367488449817,
+    "general_final_close": 1,
+    "general_any_close": 1,
+    "general_same_atom_recontact": 1,
+    "general_final_min_distance_A": 0.1384954872911039,
+    "general_final_pair_count": 8
+  }
+}

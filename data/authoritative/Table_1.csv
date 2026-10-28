@@ -1,0 +1,6 @@
+Endpoint,Definition across stages 0-5,Frames / 200
+General union,Any qualifying atom pair in at least one stage,196
+Strict same-atom recontact,"The same unordered atom pair: present, absent, present at i < j < k",147
+PHE6-PHE55 union,Residue pair close in at least one stage,67
+PHE6-PHE55 recontact,"Residue-pair binary sequence: contact, absence, contact",43
+Complete PHE alternation,010101 (10) or 101010 (15),25

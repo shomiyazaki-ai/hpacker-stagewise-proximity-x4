@@ -1,0 +1,21 @@
+{
+  "note": {
+    "pages": 6,
+    "sha256": "fc58e04ea708926de2db037d5da23c5ebe3f46d93f9add28b453ba52795f1cd7",
+    "bytes": 289445,
+    "out_of_page_text": [],
+    "missing_table_numeric_strings": [],
+    "table_caption_count": 5,
+    "all_pages_rendered": true
+  },
+  "si": {
+    "pages": 9,
+    "sha256": "817c69a2dd39e5c7020ec6509e64172124f0739d80dba440002289b25a08c4ca",
+    "bytes": 299541,
+    "out_of_page_text": [],
+    "missing_table_numeric_strings": [],
+    "table_caption_count": 8,
+    "all_pages_rendered": true
+  },
+  "visual_review": "All 15 rendered pages reviewed; final table-column widths and wrapped plot y labels corrected before final review."
+}

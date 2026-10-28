@@ -1,0 +1,9 @@
+Claim,Evidence,Package file / directory,Verification tier
+E1 stage counts / recontact,"1,200 original stage PDBs + receipts",data/pdb; provenance/PDB_SHA256_Manifest.csv,P1 independent geometry and SHA
+Source-0 local geometry,Original and perturbed stage-5 PDBs,data/e4/inputs; verification/current/e1_stages.csv,P1 independent geometry
+Ten NN-response comparisons,Saved NPZ vectors + result JSON,data/e2/v83; data/e2/v84; NN_File_Crosswalk.csv,P1 saved-array arithmetic
+One selected full-batch diagnostic,"54-residue batch receipt, arrays, two PDBs",data/e2/selected_full_batch,Archived forward receipt inspected; no P1 forward
+Selected continuation,"Four run environments, logs, summaries and final PDBs",data/e3/phase_c/outputs_phase_c,"P1 log, SHA and final geometry"
+Separate WT0 minimized geometry,Two M2 minimized PDBs,data/e3/separate_m2,P1 geometry; separate run
+Restricted LJ proxy,"4×116,140 pair rows + selected input PDBs",data/e4/results; data/e4/inputs,P1 pairwise arithmetic / PDB doubles
+Force-field typing,Archived code and Phase1A parameter audit,code/archived_execution; provenance/phase1a_historical,Historical independent typing; no new typing

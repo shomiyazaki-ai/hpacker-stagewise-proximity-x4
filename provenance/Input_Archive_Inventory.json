@@ -1,0 +1,422 @@
+[
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/NTBE_X2/NTBE_X2_Omega_Primary_v1.zip",
+    "sha256": "a543c6d46c9a820f0407c13a3fb8f1fb71fb4702e2341be6b50e99c28ae7be6e",
+    "entries": 9,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_SUMMARY/X4_Final_Scientific_Assessment_2026-10-21.zip",
+    "sha256": "e1289b795dc32d24ba4fd737d779e89a1b3994d27c265e1b4d9f3c736472c7c0",
+    "entries": 2,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_CAUSAL/X4_Final_Causal_Evidence_2026-10-21.zip",
+    "sha256": "f35c2491573e13d445c2e82191cc4777ce62bcdfc971f6f8e3169b04da5ea5dc",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_CAUSAL/X4_Internal_Mechanism_Phase1_2026-10-21.zip",
+    "sha256": "d9d6c7e336eada6bb219a6c3b1b07031b09f5641db880fb5bd5b21239df8ea18",
+    "entries": 6,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_CAUSAL/X4_Phase2B_Independent_Audit_2026-10-21.zip",
+    "sha256": "1f701872a4e0ad6b892d7f9134f49d6f1a81155ea107462d77956a96d1d4190f",
+    "entries": 2,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_ENSEMBLE/X4_WT_200_Final_Independent_Audit_2026-10-21.zip",
+    "sha256": "4db640ab68eb54ea0648656bfbeef1ecf806b5b55b006b10be4d61498bc31983",
+    "entries": 9,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_ENSEMBLE/x4_ensemble_wt_first_batch_results.zip",
+    "sha256": "e03f7611520f19a03121edd5d1e6c0e0d0fabcf796b55927539da5ff9c8d7638",
+    "entries": 146,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_ENSEMBLE/x4_wt_ensemble_continuation_through199.zip",
+    "sha256": "8b16d431b86c67d0aaf52d10cd65a51fb8ba6000ed84ebac3375e63016c8b449",
+    "entries": 3659,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip!/X4_PILOT_DECISION/X4_WT_25_Intervention_Eligibility_2026-10-21.zip",
+    "sha256": "7369631af51099426c341d7e1cb306eb7cc8ef05d9d95a248b9ded09135844d9",
+    "entries": 6,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "NTBE_X4_Work_Independent_Publication_Assessment_Evidence_2026-10-21(3)(1).zip",
+    "sha256": "76e839c793f70bd6ff04e7beebb8eb437152633569d999d98aa8833eefd62de3",
+    "entries": 18,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_1200PDB_Access_Candidate_NOT_FOR_PUBLICATION_2026-10-27(1).zip",
+    "sha256": "5e00664148cf6a2cf5c92b2cc91958300f092240b5b9773c81886c82417493c2",
+    "entries": 1203,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_E2_Replay_and_Archived_Results_COMPLETE_2026-10-27.zip!/source_archives/X4_E2_FullBatch_Replay_Kit_2026-10-27.zip",
+    "sha256": "49bf03e96f8504b90c2bdf296b1b78a1e181c482d06c4f3faa71af7c00a8e2c8",
+    "entries": 5,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_E2_Replay_and_Archived_Results_COMPLETE_2026-10-27.zip!/source_archives/hpacker_mediation_v8_1_results.zip",
+    "sha256": "290851d638f129ec983d41a334be805810c1e236c7ba0bd7f8197aaec508c777",
+    "entries": 87,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_E2_Replay_and_Archived_Results_COMPLETE_2026-10-27.zip!/source_archives/hpacker_pathway_block_v8_2_results.zip",
+    "sha256": "d3e6edc959238e67977564c96f9f0fdbaf2ffb6c74a4a9dec09d80d1cf168d77",
+    "entries": 78,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_E2_Replay_and_Archived_Results_COMPLETE_2026-10-27.zip!/source_archives/x4_v8_3_four_path_results.zip",
+    "sha256": "d06b804028804cbe7afb8c52927adcea344f2a20dc3a499eeb6430e3f76dde93",
+    "entries": 15,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_E2_Replay_and_Archived_Results_COMPLETE_2026-10-27.zip!/source_archives/x4_v8_4_weak_response_controls_results.zip",
+    "sha256": "a3b33e3088b6a7bf2fcfb043dea1f104ef96f24ab61fdfaeaf1c0d38834c6e00",
+    "entries": 21,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_E2_Replay_and_Archived_Results_COMPLETE_2026-10-27.zip!/source_archives/x4_phase2b_patch_pilot_results.zip",
+    "sha256": "ff19fd6e5465743ef253b01e6c306874006e7af5462f075a357bad7b6fd49adf",
+    "entries": 11,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_E2_Replay_and_Archived_Results_COMPLETE_2026-10-27.zip",
+    "sha256": "60f22200559c104a41637e98c633b40b06c6fec7051abff50f5ca9a9a2ba04be",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E2_Evidence.zip!/E2/originals/X4_V8_1_Propagation_Audit_2026-10-21.zip",
+    "sha256": "68c3affe69a5f099505f3c540ebfec1cc1a8bca94e0d0872f8fbef5a85ffaa04",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E2_Evidence.zip!/E2/originals/X4_V8_2_Limited_Mechanism_Audit_2026-10-21.zip",
+    "sha256": "2dc89f2117033efab009421673b0c43d2b56fc81a0ff1d21e8296255ae3e1744",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E2_Evidence.zip!/E2/originals/X4_V8_Stage2to5_Mediation_Comparison_2026-10-21.zip",
+    "sha256": "95c652cb99327202b2dd91a80ecb27c58170f292060df71ef3bb57a3df042983",
+    "entries": 6,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E2_Evidence.zip!/E2/originals/X4_PHASE2B_ACTIVATION_PATCHING_KIT.zip",
+    "sha256": "76800cbe28da6c9367a02eb0c9269ebad8b403e893edd9827f68801e2b9273ba",
+    "entries": 3,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E2_Evidence.zip",
+    "sha256": "799ca1949f1e79c3f855d9c92633c4eabe1fb92a53123036c30c114884cf76c0",
+    "entries": 10,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_WT_Ensemble_Continuation_Kit.zip",
+    "sha256": "65ce25c49b058c0de9610e7570f50d5760a2377c560d03e949bb932699c19a61",
+    "entries": 5,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_Ensemble_First_Batch_Kit.zip",
+    "sha256": "6854493b78b57dd650312891a5cf8b61beb4c769eb3847293e48ff1510247199",
+    "entries": 4,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_Ensemble_First_Batch_Hotfix_Kit.zip",
+    "sha256": "cf38c4b7266de0f567fdc68b6db715cb0483711fb21d6f7bc78696e75c633764",
+    "entries": 2,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_WT_Final_Continuation_Kit.zip",
+    "sha256": "bab324d2780b46f5ade49404e0935cd750396a30561f0313f6570f75fd6f3f06",
+    "entries": 5,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_V8_3_FOUR_PATH_DIAGNOSTIC_KIT.zip",
+    "sha256": "a4496f77527ddfd6b47466a3bbbaced65f1b418c305c7566f2673a96089924bb",
+    "entries": 3,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_V8_4_WEAK_CONTROLS_KIT.zip",
+    "sha256": "afb9035767b8ecf00167c5b9e62925616573f1d337db282819358ac947b6d7a5",
+    "entries": 4,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_V8_1_PRE_REBUILD_MEDIATION_KIT.zip",
+    "sha256": "05ff74098824d88f941628a84ea497092df24405ca2875083a9bc2f6f0ec417f",
+    "entries": 3,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip!/evidence/X4_V8_2_PATHWAY_BLOCK_KIT.zip",
+    "sha256": "f6b7c9d123ef91d3c6cb449c6989b11dcc8e9251c5feb55e01fb479e7ec4668a",
+    "entries": 3,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip!/E0/originals/X4_G1_G2_G3_Existing_Evidence_Recovery_2026-10-21.zip",
+    "sha256": "dc9bddb8fbc2003ac9c530f6231b90ab28aedf730002c1ce6e34ca2f88270a43",
+    "entries": 18,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E0_Evidence.zip",
+    "sha256": "ae74bc804ad0dd9081207129a44295ccae988007d88ccebf01490dce8a585cde",
+    "entries": 3,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/X4_PhaseC_4Cases_Sequential_2026-10-23.zip",
+    "sha256": "7a72309020e6549a41bbdad2c6e47eb2b059d9ed7f1979ce34ecd5cae8f39be6",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/wt0_baseline_20261023_163125.zip",
+    "sha256": "b30be1c9a4b60f28bb93f78e1ac691bc798841222a1ed92f8421462fa8434051",
+    "entries": 8,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/wt0_v8_1_rescue_20261023_171332.zip",
+    "sha256": "6bf78bf77eb651edc8c3d989808f9ed533aa6984bbd9cc3285e9e37ed476a8e9",
+    "entries": 8,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/wt1_baseline_20261023_175323.zip",
+    "sha256": "77f148c2051ddb0b58846cb7e2429ab5db600e2d9426d67f73cb2b740bd2a7ba",
+    "entries": 8,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/wt1_v8_1_rescue_20261023_182938.zip",
+    "sha256": "e545f0b9cbb10d5d09be5aae3010984249d7f2c7de09c34aa07fad1b884c305d",
+    "entries": 8,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/X4_M2_WT0_OnePair_2026-10-23.zip",
+    "sha256": "42b405ffdd72d1e4a382b48b57ebeeed5883d2fc1abbcf2796708b18023636d7",
+    "entries": 5,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/X4_M2_WT0_OnePair_2026-10-23_v2.zip",
+    "sha256": "a6c14a9ff08dfe1c3b0e6f8dfd61763a5f233df0d368f857f57f83f9d3a2d6ec",
+    "entries": 5,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/X4_M3_WT0_OnePair_2026-10-23.zip",
+    "sha256": "d6bd6a8fc672e6625c8391c4f672554c5aa41825796d4d90245404175986a5dc",
+    "entries": 5,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/X4_M3_WT0_OnePair_2026-10-23_v2.zip",
+    "sha256": "63ffa160174efb0c32340333491bd5620540a4974281018ebec2c4a8a0019f60",
+    "entries": 6,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/X4_M3_WT0_120s_Stage_Trace_2026-10-23(1).zip",
+    "sha256": "be804fa450ee7a9187198c8c9ec59cdf8b4b0ca5a0970cda337995c48fadc728",
+    "entries": 4,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/X4_WT0_Energy_Step_Diagnostic_2026-10-23.zip",
+    "sha256": "33beef8c25b2080168de094b2b19c9ee4e305b2dc6bbc92e5f3dd0098223da73",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/outputs.zip",
+    "sha256": "dc87cf50c2e4f48c0384a0f8ac87d66eaa7d0566a4ce2a278272a9f91744028f",
+    "entries": 9,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/outputs_m3.zip",
+    "sha256": "88eed76c2a1b173dfec5f44f822d9b833b9594ce507eb4c7557824a22907bc7b",
+    "entries": 4,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/outputs_m3(1).zip",
+    "sha256": "51c465b3ade87de4cd6d9324d2c749d5e7f3a5441d34c71bbb46cbf25def3c14",
+    "entries": 5,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/outputs_trace.zip",
+    "sha256": "85219f31ad9b7aa4ae6520658a5499eded7140a304cfa27fafa05ba76ef67725",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip!/E3/originals/outputs_energy_trace.zip",
+    "sha256": "7852b96697e518a16cc20ef31275a8c3c6b2c6d35aac7a679fc1851f752a70c3",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E3_Evidence.zip",
+    "sha256": "483511a6f5541b160d7dd3e24244b883dbf62c5a60a5a62fdbb30e2c3c986dfb",
+    "entries": 16,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E1_Evidence.zip",
+    "sha256": "bc9d791b32cc0cdc8e44e28580c1656f057948b7e9b9aa1f7d88db8385bf2687",
+    "entries": 2,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E4_Evidence.zip!/E4/originals/X4_StageA_Protein_LJ_2026-10-23.zip",
+    "sha256": "59be14bfe0a8e5ba8b5045412c492d991b5cb125cc77d1a5d50d1f33cda5d6a3",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E4_Evidence.zip!/E4/originals/X4_StageA_Protein_LJ_2026-10-23_v2.zip",
+    "sha256": "832c94613917f5738efa06d8403e5490cae9a1581f8da8e9adfddbaa0fe34146",
+    "entries": 7,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E4_Evidence.zip!/E4/originals/stage_a_results.zip",
+    "sha256": "2591f736a7da5183ebbe6e78d1e02ffce7be4220c1c3b004258c851a56990375",
+    "entries": 9,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip!/X4_E4_Evidence.zip",
+    "sha256": "56d108aa940a59779ab034011bfbe4376a47f5cb2570d15ddb81f3637a92546d",
+    "entries": 3,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase0_Final_Evidence_Handoff_2026-10-27(3).zip",
+    "sha256": "8681c0d33ef2dde4c19a19db4b723cc85782b0a198c976a68a504f35379ff74e",
+    "entries": 11,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Phase1A_Independent_Audit_2026-10-27(2).zip",
+    "sha256": "54e674e7b16b0fb144bae55d5c420b291111e90414ee760384e014c887acfb9d",
+    "entries": 61,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_PhaseC_COMPLETE_FOR_WORK.zip",
+    "sha256": "a2969542a48a222cb1b50a41474b7ffce7881416fcca8160f6cc9a5655ade157",
+    "entries": 45,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_StageA_Code_and_Results_COMPLETE_2026-10-27.zip",
+    "sha256": "ddf22699f0258dde9c811fbf7cc9d7b7f93143d307521afafe479e60ba774064",
+    "entries": 3,
+    "unsafe": [],
+    "crc": "PASS"
+  },
+  {
+    "archive": "X4_Supporting_Data_and_Code_v1.0.0.zip",
+    "sha256": "98f0bef01e3cc864d37563ab1d0d9a519f7f38fbe75c24b489ab7c299cc50977",
+    "entries": 68,
+    "unsafe": [],
+    "crc": "PASS"
+  }
+]

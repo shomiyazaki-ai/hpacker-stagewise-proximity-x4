@@ -1,0 +1,511 @@
+{
+  "method": {
+    "timestamp_utc": "2026-10-23T10:41:17.205118+00:00",
+    "bioemu_commit": "42c551133f9825f4ec01812075b0d50e268c2209",
+    "forcefield": "OpenMM amber99sb.xml, tip3p.xml (protein-only NoCutoff surrogate)",
+    "selection": "heavy-heavy, interresidue, residue-index separation >=2",
+    "exclusions": "original NonbondedForce exceptions (1-2,1-3,1-4) honored; epsilon=0 skipped",
+    "limitations": "No solvent, ions, hydrogens LJ, PME, bonded energy, or whole-system initial PE. Temporary C-terminal OXT is constructed solely for FF atom typing, is excluded from 494-heavy-atom analysis; source inputs never edited. Modeller.addHydrogens may optimize added hydrogens.",
+    "input_sha256": {
+      "wt0_baseline": "436b4995664c81ab64e97c57f4b879eb1dc5d5f3146dd627081fe48c509f114f",
+      "wt0_v8_1_rescue": "25ba1f07865fc074b99296fa809d832821dd8b5abd23fa909f3de3f43bd969e8",
+      "wt1_baseline": "81d4034a6df8ff933e6b27e04ff6cfd058763b4770e22771774c77c6047ad84b",
+      "wt1_v8_1_rescue": "90dd4ede7523b32f3a6b68eeb56768b874031619a15ac1fc27e41b8caf028d6b"
+    }
+  },
+  "cases": {
+    "wt0_baseline": {
+      "case": "wt0_baseline",
+      "heavy_atoms": 494,
+      "all_particles": 952,
+      "exceptions_total": 5144,
+      "nonlocal_interresidue_heavy_pairs": 116140,
+      "lj_repulsive_kj_mol": 16616832222460.873,
+      "lj_attractive_kj_mol": -4894222.195597668,
+      "lj_net_kj_mol": 16616827328250.18,
+      "under_1p6A_count": 6,
+      "min_interresidue_dist_A": 0.27727040967732464,
+      "short_contacts": [
+        {
+          "pair": "3:CG|58:CE2",
+          "distance_A": 1.529889670469903,
+          "lj_net_kj_mol": 23340.315542362132
+        },
+        {
+          "pair": "6:CD1|55:CD2",
+          "distance_A": 1.4410097146614804,
+          "lj_net_kj_mol": 42546.28522005185
+        },
+        {
+          "pair": "6:CD1|55:CE2",
+          "distance_A": 0.27727040967732464,
+          "lj_net_kj_mol": 16616827153464.586
+        },
+        {
+          "pair": "6:CE1|55:CD2",
+          "distance_A": 1.4678013507543115,
+          "lj_net_kj_mol": 34084.81852262836
+        },
+        {
+          "pair": "6:CE1|55:CE2",
+          "distance_A": 1.5802710546968526,
+          "lj_net_kj_mol": 14002.592448087587
+        },
+        {
+          "pair": "6:CG|55:CE2",
+          "distance_A": 1.465219612101618,
+          "lj_net_kj_mol": 34814.9241542652
+        }
+      ],
+      "interpretation": "NoCutoff protein-only, heavy-heavy, nonadjacent-residue pairwise LJ; excludes hydrogen-containing and adjacent/same-residue terms. NOT original solvated PE."
+    },
+    "wt0_v8_1_rescue": {
+      "case": "wt0_v8_1_rescue",
+      "heavy_atoms": 494,
+      "all_particles": 952,
+      "exceptions_total": 5144,
+      "nonlocal_interresidue_heavy_pairs": 116140,
+      "lj_repulsive_kj_mol": 29576.72260415723,
+      "lj_attractive_kj_mol": -2505.3040208835087,
+      "lj_net_kj_mol": 27071.418583273637,
+      "under_1p6A_count": 1,
+      "min_interresidue_dist_A": 1.5502191572441912,
+      "short_contacts": [
+        {
+          "pair": "3:CG|58:CE2",
+          "distance_A": 1.5502191572441912,
+          "lj_net_kj_mol": 19907.23718747084
+        }
+      ],
+      "interpretation": "NoCutoff protein-only, heavy-heavy, nonadjacent-residue pairwise LJ; excludes hydrogen-containing and adjacent/same-residue terms. NOT original solvated PE."
+    },
+    "wt1_baseline": {
+      "case": "wt1_baseline",
+      "heavy_atoms": 494,
+      "all_particles": 952,
+      "exceptions_total": 5144,
+      "nonlocal_interresidue_heavy_pairs": 116140,
+      "lj_repulsive_kj_mol": 9958132.50009486,
+      "lj_attractive_kj_mol": -6822.836462329809,
+      "lj_net_kj_mol": 9951309.663635513,
+      "under_1p6A_count": 3,
+      "min_interresidue_dist_A": 0.9158946510322953,
+      "short_contacts": [
+        {
+          "pair": "6:CD1|55:CD2",
+          "distance_A": 1.4966940781911395,
+          "lj_net_kj_mol": 26953.828751636844
+        },
+        {
+          "pair": "6:CD1|55:CE2",
+          "distance_A": 1.405194931824664,
+          "lj_net_kj_mol": 57594.44248365195
+        },
+        {
+          "pair": "6:CG|55:CE2",
+          "distance_A": 0.9158946510322953,
+          "lj_net_kj_mol": 9841882.283138866
+        }
+      ],
+      "interpretation": "NoCutoff protein-only, heavy-heavy, nonadjacent-residue pairwise LJ; excludes hydrogen-containing and adjacent/same-residue terms. NOT original solvated PE."
+    },
+    "wt1_v8_1_rescue": {
+      "case": "wt1_v8_1_rescue",
+      "heavy_atoms": 494,
+      "all_particles": 952,
+      "exceptions_total": 5144,
+      "nonlocal_interresidue_heavy_pairs": 116140,
+      "lj_repulsive_kj_mol": 29908.229164859833,
+      "lj_attractive_kj_mol": -2325.27989886761,
+      "lj_net_kj_mol": 27582.94926599252,
+      "under_1p6A_count": 1,
+      "min_interresidue_dist_A": 1.4610285265875254,
+      "short_contacts": [
+        {
+          "pair": "23:NH1|39:OD1",
+          "distance_A": 1.4610285265875254,
+          "lj_net_kj_mol": 26546.91219089201
+        }
+      ],
+      "interpretation": "NoCutoff protein-only, heavy-heavy, nonadjacent-residue pairwise LJ; excludes hydrogen-containing and adjacent/same-residue terms. NOT original solvated PE."
+    }
+  },
+  "paired_differences": {
+    "wt0": {
+      "baseline": "wt0_baseline",
+      "rescue": "wt0_v8_1_rescue",
+      "delta_net_rescue_minus_base_kj_mol": -16616827301178.762,
+      "delta_repulsive_rescue_minus_base_kj_mol": -16616832192884.15,
+      "top_20_absolute_pair_contributions": [
+        {
+          "pair_id": "6:PHE:CD1|55:PHE:CE2",
+          "distance_baseline_A": 0.27727040967732464,
+          "distance_rescue_A": 5.51423517218561,
+          "net_baseline_kj_mol": 16616827153464.586,
+          "net_rescue_kj_mol": -0.07470135295635262,
+          "delta_net_rescue_minus_base_kj_mol": -16616827153464.66,
+          "delta_repulsive_rescue_minus_base_kj_mol": -16616832043918.537
+        },
+        {
+          "pair_id": "6:PHE:CD1|55:PHE:CD2",
+          "distance_baseline_A": 1.4410097146614804,
+          "distance_rescue_A": 5.0322385696578475,
+          "net_baseline_kj_mol": 42546.28522005185,
+          "net_rescue_kj_mol": -0.12382746660752245,
+          "delta_net_rescue_minus_base_kj_mol": -42546.40904751846,
+          "delta_repulsive_rescue_minus_base_kj_mol": -42794.45340323255
+        },
+        {
+          "pair_id": "6:PHE:CG|55:PHE:CE2",
+          "distance_baseline_A": 1.465219612101618,
+          "distance_rescue_A": 6.562472706089095,
+          "net_baseline_kj_mol": 34814.9241542652,
+          "net_rescue_kj_mol": -0.02728277097665125,
+          "delta_net_rescue_minus_base_kj_mol": -34814.95143703618,
+          "delta_repulsive_rescue_minus_base_kj_mol": -35039.4947754969
+        },
+        {
+          "pair_id": "6:PHE:CE1|55:PHE:CD2",
+          "distance_baseline_A": 1.4678013507543115,
+          "distance_rescue_A": 4.174162866725268,
+          "net_baseline_kj_mol": 34084.81852262836,
+          "net_rescue_kj_mol": -0.29748223471024177,
+          "delta_net_rescue_minus_base_kj_mol": -34085.11600486307,
+          "delta_repulsive_rescue_minus_base_kj_mol": -34306.90744955088
+        },
+        {
+          "pair_id": "6:PHE:CE1|55:PHE:CE2",
+          "distance_baseline_A": 1.5802710546968526,
+          "distance_rescue_A": 4.392756325559701,
+          "net_baseline_kj_mol": 14002.592448087587,
+          "net_rescue_kj_mol": -0.2428193344844718,
+          "delta_net_rescue_minus_base_kj_mol": -14002.835267422071,
+          "delta_repulsive_rescue_minus_base_kj_mol": -14145.211807595384
+        },
+        {
+          "pair_id": "6:PHE:CD1|55:PHE:CZ",
+          "distance_baseline_A": 1.623594705374582,
+          "distance_rescue_A": 4.939100840388093,
+          "net_baseline_kj_mol": 10103.58621170882,
+          "net_rescue_kj_mol": -0.13678893665633754,
+          "delta_net_rescue_minus_base_kj_mol": -10103.723000645476,
+          "delta_repulsive_rescue_minus_base_kj_mol": -10224.882156024156
+        },
+        {
+          "pair_id": "3:ARG:NH2|62:MET:CE",
+          "distance_baseline_A": 1.743799154547792,
+          "distance_rescue_A": 1.964911913062377,
+          "net_baseline_kj_mol": 5158.601596370656,
+          "net_rescue_kj_mol": 1203.9252355301076,
+          "delta_net_rescue_minus_base_kj_mol": -3954.676360840548,
+          "delta_repulsive_rescue_minus_base_kj_mol": -4010.757686197223
+        },
+        {
+          "pair_id": "3:ARG:CZ|62:MET:CE",
+          "distance_baseline_A": 1.7749672235885086,
+          "distance_rescue_A": 2.4759454197189963,
+          "net_baseline_kj_mol": 3876.8515563475094,
+          "net_rescue_kj_mol": 62.02611387970783,
+          "delta_net_rescue_minus_base_kj_mol": -3814.8254424678016,
+          "delta_repulsive_rescue_minus_base_kj_mol": -3884.0936675896914
+        },
+        {
+          "pair_id": "3:ARG:CG|58:PHE:CE2",
+          "distance_baseline_A": 1.529889670469903,
+          "distance_rescue_A": 1.5502191572441912,
+          "net_baseline_kj_mol": 23340.315542362132,
+          "net_rescue_kj_mol": 19907.23718747084,
+          "delta_net_rescue_minus_base_kj_mol": -3433.0783548912914,
+          "delta_repulsive_rescue_minus_base_kj_mol": -3447.9627619262246
+        },
+        {
+          "pair_id": "6:PHE:CE1|55:PHE:CD1",
+          "distance_baseline_A": 3.7406628046599035,
+          "distance_rescue_A": 1.8814737919923898,
+          "net_baseline_kj_mol": -0.35401211513723174,
+          "net_rescue_kj_mol": 1693.3683311566056,
+          "delta_net_rescue_minus_base_kj_mol": 1693.7223432717428,
+          "delta_repulsive_rescue_minus_base_kj_mol": 1743.0047236091093
+        },
+        {
+          "pair_id": "6:PHE:CB|55:PHE:CZ",
+          "distance_baseline_A": 2.0260731887834647,
+          "distance_rescue_A": 7.338288505557218,
+          "net_baseline_kj_mol": 772.4692263556673,
+          "net_rescue_kj_mol": -0.01589080705949739,
+          "delta_net_rescue_minus_base_kj_mol": -772.4851171627267,
+          "delta_repulsive_rescue_minus_base_kj_mol": -808.7016241002653
+        },
+        {
+          "pair_id": "6:PHE:CG|55:PHE:CZ",
+          "distance_baseline_A": 2.0277002817288916,
+          "distance_rescue_A": 5.94299834932421,
+          "net_baseline_kj_mol": 678.171921983668,
+          "net_rescue_kj_mol": -0.04866818578230614,
+          "delta_net_rescue_minus_base_kj_mol": -678.2205901694502,
+          "delta_repulsive_rescue_minus_base_kj_mol": -710.1405310684519
+        },
+        {
+          "pair_id": "55:PHE:O|58:PHE:CD1",
+          "distance_baseline_A": 1.7370524797456892,
+          "distance_rescue_A": 1.7552468705922375,
+          "net_baseline_kj_mol": 3099.9032177333015,
+          "net_rescue_kj_mol": 2730.7334806882554,
+          "delta_net_rescue_minus_base_kj_mol": -369.1697370450461,
+          "delta_repulsive_rescue_minus_base_kj_mol": -374.2987567556529
+        },
+        {
+          "pair_id": "55:PHE:O|58:PHE:CE1",
+          "distance_baseline_A": 1.8570608503729815,
+          "distance_rescue_A": 1.8946589232721132,
+          "net_baseline_kj_mol": 1371.8415112579182,
+          "net_rescue_kj_mol": 1072.8668607247325,
+          "delta_net_rescue_minus_base_kj_mol": -298.9746505331857,
+          "delta_repulsive_rescue_minus_base_kj_mol": -305.39748892090165
+        },
+        {
+          "pair_id": "6:PHE:CZ|55:PHE:CD1",
+          "distance_baseline_A": 4.781696808925483,
+          "distance_rescue_A": 2.214961739735177,
+          "net_baseline_kj_mol": -0.1618886800984244,
+          "net_rescue_kj_mol": 227.21638859887116,
+          "delta_net_rescue_minus_base_kj_mol": 227.3782772789696,
+          "delta_repulsive_rescue_minus_base_kj_mol": 246.0103553782398
+        },
+        {
+          "pair_id": "3:ARG:NH1|62:MET:CE",
+          "distance_baseline_A": 2.246839473553216,
+          "distance_rescue_A": 2.9207915353072336,
+          "net_baseline_kj_mol": 227.663809126961,
+          "net_rescue_kj_mol": 5.838886295532997,
+          "delta_net_rescue_minus_base_kj_mol": -221.824922831428,
+          "delta_repulsive_rescue_minus_base_kj_mol": -240.82370402698035
+        },
+        {
+          "pair_id": "41:MET:CE|45:ILE:CG1",
+          "distance_baseline_A": 2.269140049586996,
+          "distance_rescue_A": 5.342525425847553,
+          "net_baseline_kj_mol": 213.48572850572882,
+          "net_rescue_kj_mol": -0.11349386859832729,
+          "delta_net_rescue_minus_base_kj_mol": -213.59922237432716,
+          "delta_repulsive_rescue_minus_base_kj_mol": -234.18485733612587
+        },
+        {
+          "pair_id": "6:PHE:CZ|55:PHE:CE1",
+          "distance_baseline_A": 4.909185925951803,
+          "distance_rescue_A": 2.233338584203569,
+          "net_baseline_kj_mol": -0.1412402697954547,
+          "net_rescue_kj_mol": 204.9026916358248,
+          "delta_net_rescue_minus_base_kj_mol": 205.04393190562024,
+          "delta_repulsive_rescue_minus_base_kj_mol": 222.79300960701912
+        },
+        {
+          "pair_id": "41:MET:CE|45:ILE:CD1",
+          "distance_baseline_A": 2.3538754725511795,
+          "distance_rescue_A": 5.601838294923489,
+          "net_baseline_kj_mol": 134.21853146212806,
+          "net_rescue_kj_mol": -0.08690543076950227,
+          "delta_net_rescue_minus_base_kj_mol": -134.30543689289755,
+          "delta_repulsive_rescue_minus_base_kj_mol": -150.8323259890433
+        },
+        {
+          "pair_id": "6:PHE:CE1|55:PHE:CE1",
+          "distance_baseline_A": 3.7932135431708187,
+          "distance_rescue_A": 2.3154644755019222,
+          "net_baseline_kj_mol": -0.35934229356634073,
+          "net_rescue_kj_mol": 130.03594343714306,
+          "delta_net_rescue_minus_base_kj_mol": 130.3952857307094,
+          "delta_repulsive_rescue_minus_base_kj_mol": 144.06852071899772
+        }
+      ]
+    },
+    "wt1": {
+      "baseline": "wt1_baseline",
+      "rescue": "wt1_v8_1_rescue",
+      "delta_net_rescue_minus_base_kj_mol": -9923726.71436952,
+      "delta_repulsive_rescue_minus_base_kj_mol": -9928224.270930002,
+      "top_20_absolute_pair_contributions": [
+        {
+          "pair_id": "6:PHE:CG|55:PHE:CE2",
+          "distance_baseline_A": 0.9158946510322953,
+          "distance_rescue_A": 6.335595391149255,
+          "net_baseline_kj_mol": 9841882.283138866,
+          "net_rescue_kj_mol": -0.03353917057329668,
+          "delta_net_rescue_minus_base_kj_mol": -9841882.316678036,
+          "delta_repulsive_rescue_minus_base_kj_mol": -9845646.69461089
+        },
+        {
+          "pair_id": "6:PHE:CD1|55:PHE:CE2",
+          "distance_baseline_A": 1.405194931824664,
+          "distance_rescue_A": 5.765729887603227,
+          "net_baseline_kj_mol": 57594.44248365195,
+          "net_rescue_kj_mol": -0.05794277899345933,
+          "delta_net_rescue_minus_base_kj_mol": -57594.50042643094,
+          "delta_repulsive_rescue_minus_base_kj_mol": -57883.07618991206
+        },
+        {
+          "pair_id": "6:PHE:CD1|55:PHE:CD2",
+          "distance_baseline_A": 1.4966940781911395,
+          "distance_rescue_A": 4.637832500439293,
+          "net_baseline_kj_mol": 26953.828751636844,
+          "net_rescue_kj_mol": -0.18865294881023448,
+          "delta_net_rescue_minus_base_kj_mol": -26954.017404585655,
+          "delta_repulsive_rescue_minus_base_kj_mol": -27151.478362540944
+        },
+        {
+          "pair_id": "23:ARG:NH1|39:ASP:OD1",
+          "distance_baseline_A": 1.872381548814045,
+          "distance_rescue_A": 1.4610285265875254,
+          "net_baseline_kj_mol": 1301.7367385443367,
+          "net_rescue_kj_mol": 26546.91219089201,
+          "delta_net_rescue_minus_base_kj_mol": 25245.175452347674,
+          "delta_repulsive_rescue_minus_base_kj_mol": 25470.736036392573
+        },
+        {
+          "pair_id": "6:PHE:CE1|55:PHE:CD2",
+          "distance_baseline_A": 1.6076608656999465,
+          "distance_rescue_A": 4.672936198403231,
+          "net_baseline_kj_mol": 11380.81324173833,
+          "net_rescue_kj_mol": -0.1817725560697541,
+          "delta_net_rescue_minus_base_kj_mol": -11380.9950142944,
+          "delta_repulsive_rescue_minus_base_kj_mol": -11509.489043900961
+        },
+        {
+          "pair_id": "6:PHE:CB|55:PHE:CE2",
+          "distance_baseline_A": 1.7302693387200523,
+          "distance_rescue_A": 6.70877989364005,
+          "net_baseline_kj_mol": 5280.44828505937,
+          "net_rescue_kj_mol": -0.027024096317038157,
+          "delta_net_rescue_minus_base_kj_mol": -5280.475309155688,
+          "delta_repulsive_rescue_minus_base_kj_mol": -5373.847949998975
+        },
+        {
+          "pair_id": "6:PHE:CB|55:PHE:CZ",
+          "distance_baseline_A": 1.883239214894297,
+          "distance_rescue_A": 7.845509309193729,
+          "net_baseline_kj_mol": 1888.2112208564427,
+          "net_rescue_kj_mol": -0.010676233859754273,
+          "delta_net_rescue_minus_base_kj_mol": -1888.2218970903025,
+          "delta_repulsive_rescue_minus_base_kj_mol": -1944.3931012165897
+        },
+        {
+          "pair_id": "6:PHE:CG|55:PHE:CD2",
+          "distance_baseline_A": 1.866239722176921,
+          "distance_rescue_A": 5.171975444152377,
+          "net_baseline_kj_mol": 1869.5262908187656,
+          "net_rescue_kj_mol": -0.10673471858486089,
+          "delta_net_rescue_minus_base_kj_mol": -1869.6330255373505,
+          "delta_repulsive_rescue_minus_base_kj_mol": -1922.1145035546897
+        },
+        {
+          "pair_id": "6:PHE:CD2|55:PHE:CE2",
+          "distance_baseline_A": 1.9151571442384017,
+          "distance_rescue_A": 6.961450589150545,
+          "net_baseline_kj_mol": 1364.0517893153265,
+          "net_rescue_kj_mol": -0.01925929102645946,
+          "delta_net_rescue_minus_base_kj_mol": -1364.0710486063529,
+          "delta_repulsive_rescue_minus_base_kj_mol": -1409.0858672938375
+        },
+        {
+          "pair_id": "6:PHE:CZ|55:PHE:CD2",
+          "distance_baseline_A": 2.0316856620572814,
+          "distance_rescue_A": 5.232639981765593,
+          "net_baseline_kj_mol": 662.0092487549888,
+          "net_rescue_kj_mol": -0.10011213610009999,
+          "delta_net_rescue_minus_base_kj_mol": -662.1093608910888,
+          "delta_repulsive_rescue_minus_base_kj_mol": -693.5970425230664
+        },
+        {
+          "pair_id": "23:ARG:NH1|39:ASP:CG",
+          "distance_baseline_A": 2.5766616318292064,
+          "distance_rescue_A": 2.074291184100343,
+          "net_baseline_kj_mol": 33.77859584411334,
+          "net_rescue_kj_mol": 547.6887709340348,
+          "delta_net_rescue_minus_base_kj_mol": 513.9101750899215,
+          "delta_repulsive_rescue_minus_base_kj_mol": 538.8873995415529
+        },
+        {
+          "pair_id": "6:PHE:CG|55:PHE:CZ",
+          "distance_baseline_A": 2.124659077316822,
+          "distance_rescue_A": 7.357403325974977,
+          "net_baseline_kj_mol": 381.2768175550188,
+          "net_rescue_kj_mol": -0.013873146848344193,
+          "delta_net_rescue_minus_base_kj_mol": -381.29069070186716,
+          "delta_repulsive_rescue_minus_base_kj_mol": -405.43322513954854
+        },
+        {
+          "pair_id": "23:ARG:CZ|39:ASP:OD2",
+          "distance_baseline_A": 2.396886940534721,
+          "distance_rescue_A": 2.100722333993514,
+          "net_baseline_kj_mol": 54.578247189265014,
+          "net_rescue_kj_mol": 298.31820496230324,
+          "delta_net_rescue_minus_base_kj_mol": 243.7399577730382,
+          "delta_repulsive_rescue_minus_base_kj_mol": 258.53076930827643
+        },
+        {
+          "pair_id": "6:PHE:CD2|55:PHE:CD2",
+          "distance_baseline_A": 2.226708306152114,
+          "distance_rescue_A": 5.6751535110474505,
+          "net_baseline_kj_mol": 212.67337431711252,
+          "net_rescue_kj_mol": -0.06343902558498725,
+          "delta_net_rescue_minus_base_kj_mol": -212.7368133426975,
+          "delta_repulsive_rescue_minus_base_kj_mol": -230.90045491419346
+        },
+        {
+          "pair_id": "6:PHE:CE2|55:PHE:CD2",
+          "distance_baseline_A": 2.303721344246507,
+          "distance_rescue_A": 5.7041803842354,
+          "net_baseline_kj_mol": 138.67752388588713,
+          "net_rescue_kj_mol": -0.06161643366497728,
+          "delta_net_rescue_minus_base_kj_mol": -138.7391403195521,
+          "delta_repulsive_rescue_minus_base_kj_mol": -153.5405133967786
+        },
+        {
+          "pair_id": "23:ARG:NH1|39:ASP:OD2",
+          "distance_baseline_A": 2.729431137832945,
+          "distance_rescue_A": 2.2687481893287513,
+          "net_baseline_kj_mol": 7.999127121902806,
+          "net_rescue_kj_mol": 115.75028146501127,
+          "delta_net_rescue_minus_base_kj_mol": 107.75115434310847,
+          "delta_repulsive_rescue_minus_base_kj_mol": 121.67604501961615
+        },
+        {
+          "pair_id": "58:PHE:CZ|62:MET:CE",
+          "distance_baseline_A": 2.4466181321821243,
+          "distance_rescue_A": 3.151112816974066,
+          "net_baseline_kj_mol": 72.42645258051816,
+          "net_rescue_kj_mol": 1.477185231820036,
+          "delta_net_rescue_minus_base_kj_mol": -70.94926734869813,
+          "delta_repulsive_rescue_minus_base_kj_mol": -80.07433639828608
+        },
+        {
+          "pair_id": "22:MET:SD|42:ILE:CG1",
+          "distance_baseline_A": 2.9981211972712947,
+          "distance_rescue_A": 2.5956844660065572,
+          "net_baseline_kj_mol": 9.859099090686776,
+          "net_rescue_kj_mol": 77.74649425761831,
+          "delta_net_rescue_minus_base_kj_mol": 67.88739516693153,
+          "delta_repulsive_rescue_minus_base_kj_mol": 77.21773044439047
+        },
+        {
+          "pair_id": "6:PHE:CE1|55:PHE:CE2",
+          "distance_baseline_A": 2.447807091664119,
+          "distance_rescue_A": 5.895011954158625,
+          "net_baseline_kj_mol": 63.8118296012156,
+          "net_rescue_kj_mol": -0.05100160438508199,
+          "delta_net_rescue_minus_base_kj_mol": -63.862831205600685,
+          "delta_repulsive_rescue_minus_base_kj_mol": -74.14004496773954
+        },
+        {
+          "pair_id": "6:PHE:CD1|55:PHE:CZ",
+          "distance_baseline_A": 2.448854897006124,
+          "distance_rescue_A": 6.600154505193365,
+          "net_baseline_kj_mol": 63.45853336336454,
+          "net_rescue_kj_mol": -0.026378974196163224,
+          "delta_net_rescue_minus_base_kj_mol": -63.4849123375607,
+          "delta_repulsive_rescue_minus_base_kj_mol": -73.76170282155172
+        }
+      ]
+    }
+  }
+}

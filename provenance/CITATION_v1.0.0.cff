@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this archived technical note or accompanying analysis, please cite this record and its upstream sources."
+title: "Stage-wise Extreme Atomic Proximity in HPacker Side-chain Reconstruction"
+type: report
+authors:
+  - family-names: Miyazaki
+    given-names: Sho
+    affiliation: "Independent researcher, Tokyo, Japan"
+license: CC-BY-4.0
+abstract: "Author-created manuscript and figures CC BY 4.0; original owned code MIT; third-party inputs subject to separate terms. DOI not yet assigned."

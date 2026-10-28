@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "xtc_bytes": 258900,
+  "xtc_sha256": "0f42d6d669f5e1c765d0be9299aafc3f127676800d72bfee0c3c4e511ff790b9",
+  "frames": 200,
+  "atoms_per_frame": 310,
+  "topology_bytes": 25163,
+  "topology_sha256": "ad00dcbeec51b8941430bba94eadb4226a1e3e495e6644bce9492a193bf10798",
+  "topology_atoms": 310,
+  "residues": 63,
+  "backbone_atoms": 252,
+  "xtc_coordinate_decompression": false,
+  "official_archive_downloaded_in_P1": false,
+  "official_archive_MD5_recomputed_in_P1": false
+}
